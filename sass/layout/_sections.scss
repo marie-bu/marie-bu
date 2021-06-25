@@ -1,0 +1,16 @@
+.section {
+    display: none;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    min-height: 100vh;
+    padding: $padding-section;
+    &-active {
+        display: flex;
+    }
+}
+
+#navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

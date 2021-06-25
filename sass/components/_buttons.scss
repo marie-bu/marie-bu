@@ -1,0 +1,27 @@
+.btn-circle {
+    @include circle(13rem);
+    border: none;
+    font-size: 1.2rem;
+    margin: auto;
+    @include box-shadow;
+}
+#btn {
+    &-cv {
+        @include btn-color($color-cv);
+    }
+    &-career {
+        @include btn-color($color-career);
+    }
+    &-refer {
+        @include btn-color($color-refer);
+    }
+    &-skills {
+        @include btn-color($color-skills);
+    }
+    &-portfolio {
+        @include btn-color($color-portfolio);
+    }
+    &-contact {
+        @include btn-color($color-contact);
+    }
+}

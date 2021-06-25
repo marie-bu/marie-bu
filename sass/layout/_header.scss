@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    gap: 6rem;
+    height: 4rem;
+    padding-left: 10rem;
+    background-color: rgba($color: $text-grey, $alpha: 0.2);
+    @include box-shadow;
+    img {
+        position: absolute;
+        top: -1.5rem;
+        left: -1.5rem;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        //@include circle(16rem);
+        @include box-shadow;
+    }
+    button {
+        display: none;
+    }
+    nav {
+        display: none;
+    }
+}
