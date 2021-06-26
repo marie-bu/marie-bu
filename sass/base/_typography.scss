@@ -34,6 +34,14 @@ h5 {
     font-weight: 700;
 }
 
+.bold {
+    font-weight: 500;
+}
+
+.light {
+    color: rgba($color: $text-grey, $alpha: 0.7);
+}
+
 .project-details {
     &-skills {
         font-size: 0.9rem;
@@ -54,10 +62,11 @@ h5 {
         text-transform: uppercase;
         font-weight: 600;
     }
-    .bold {
-        font-weight: 500;
-    }
-    .light {
-        color: rgba($color: $text-grey, $alpha: 0.7);
+}
+
+#contact {
+    p {
+        line-height: 2rem;
+        text-align: center;
     }
 }

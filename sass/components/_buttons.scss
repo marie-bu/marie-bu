@@ -1,9 +1,4 @@
-.btn-circle {
-    @include circle(13rem, 1.2rem);
-    //margin: auto;
-    @include box-shadow;
-}
-#btn {
+.btn {
     &-cv {
         @include btn-color($color-cv);
     }
@@ -24,11 +19,56 @@
     }
 }
 
-.btn {
+.btn-circle {
     @include btn;
     @include box-shadow;
-    &-cv {
-        @include btn-color($color-cv);
-        max-width: max-content;
+    &-l {
+        @include circle(13rem, 1.2rem);
+        margin: auto;
+    }
+    &-m {
+        @include circle(9rem, 1rem);
+    }
+    &-s {
+        @include circle(7rem, 1rem);
+    }
+}
+
+.btn-icon {
+    @include btn;
+    @include box-shadow;
+    &-contact {
+        @include circle(6rem, 3rem);
+        margin: 2rem;
+        background-color: rgba($color: $color-contact, $alpha: 0.2);
+        #red-malt, #white-malt {
+            @include circle(3rem, 1rem);
+        }
+        #white-malt {
+            display: none;
+        }
+        .fa-github {
+            color: #24292e;
+        }
+        .fa-linkedin {
+            color: #0e76a8;
+        }
+        &:hover, &:focus {
+            background-color: $color-contact;
+            #red-malt {
+                display: none;
+            }
+            #white-malt {
+                display: block;
+            }
+            i {
+                color: $bg-grey;
+            }
+        }
+    }
+    &-refer {
+        @include circle(2rem, 1rem);
+        @include btn-color($color-refer);
+        margin: 0.5rem;
     }
 }

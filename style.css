@@ -61,6 +61,14 @@ h5 {
   font-weight: 700;
 }
 
+.bold {
+  font-weight: 500;
+}
+
+.light {
+  color: rgba(64, 63, 76, 0.7);
+}
+
 .project-details-skills {
   font-size: 0.9rem;
   font-weight: 700;
@@ -78,85 +86,151 @@ h5 {
   text-transform: uppercase;
   font-weight: 600;
 }
-.cv-content .bold {
-  font-weight: 500;
+
+#contact p {
+  line-height: 2rem;
+  text-align: center;
 }
-.cv-content .light {
-  color: rgba(64, 63, 76, 0.7);
+
+.btn-cv {
+  background-color: rgba(255, 153, 10, 0.2);
+  color: #FF990A;
+}
+.btn-cv:hover, .btn-cv:focus {
+  background-color: #FF990A;
+  color: #EEF0F2;
+}
+.btn-career {
+  background-color: rgba(255, 56, 100, 0.2);
+  color: #FF3864;
+}
+.btn-career:hover, .btn-career:focus {
+  background-color: #FF3864;
+  color: #EEF0F2;
+}
+.btn-refer {
+  background-color: rgba(51, 184, 255, 0.2);
+  color: #33B8FF;
+}
+.btn-refer:hover, .btn-refer:focus {
+  background-color: #33B8FF;
+  color: #EEF0F2;
+}
+.btn-skills {
+  background-color: rgba(224, 0, 217, 0.2);
+  color: #E000D9;
+}
+.btn-skills:hover, .btn-skills:focus {
+  background-color: #E000D9;
+  color: #EEF0F2;
+}
+.btn-portfolio {
+  background-color: rgba(0, 196, 154, 0.2);
+  color: #00C49A;
+}
+.btn-portfolio:hover, .btn-portfolio:focus {
+  background-color: #00C49A;
+  color: #EEF0F2;
+}
+.btn-contact {
+  background-color: rgba(221, 90, 64, 0.2);
+  color: #DD5A40;
+}
+.btn-contact:hover, .btn-contact:focus {
+  background-color: #DD5A40;
+  color: #EEF0F2;
 }
 
 .btn-circle {
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 1px 1px 5px #1d1c22;
+}
+.btn-circle-l {
   width: 13rem;
   height: 13rem;
   border-radius: 50%;
   border: none;
   font-size: 1.2rem;
-  box-shadow: 1px 1px 5px #1d1c22;
+  margin: auto;
+}
+.btn-circle-m {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1rem;
+}
+.btn-circle-s {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1rem;
 }
 
-#btn-cv {
-  background-color: rgba(255, 153, 10, 0.2);
-  color: #FF990A;
+.btn-icon {
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 1px 1px 5px #1d1c22;
 }
-#btn-cv:hover, #btn-cv:focus {
-  background-color: #FF990A;
+.btn-icon-contact {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 3rem;
+  margin: 2rem;
+  background-color: rgba(221, 90, 64, 0.2);
+}
+.btn-icon-contact #red-malt, .btn-icon-contact #white-malt {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1rem;
+}
+.btn-icon-contact #white-malt {
+  display: none;
+}
+.btn-icon-contact .fa-github {
+  color: #24292e;
+}
+.btn-icon-contact .fa-linkedin {
+  color: #0e76a8;
+}
+.btn-icon-contact:hover, .btn-icon-contact:focus {
+  background-color: #DD5A40;
+}
+.btn-icon-contact:hover #red-malt, .btn-icon-contact:focus #red-malt {
+  display: none;
+}
+.btn-icon-contact:hover #white-malt, .btn-icon-contact:focus #white-malt {
+  display: block;
+}
+.btn-icon-contact:hover i, .btn-icon-contact:focus i {
   color: #EEF0F2;
 }
-#btn-career {
-  background-color: rgba(255, 56, 100, 0.2);
-  color: #FF3864;
-}
-#btn-career:hover, #btn-career:focus {
-  background-color: #FF3864;
-  color: #EEF0F2;
-}
-#btn-refer {
+.btn-icon-refer {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1rem;
   background-color: rgba(51, 184, 255, 0.2);
   color: #33B8FF;
+  margin: 0.5rem;
 }
-#btn-refer:hover, #btn-refer:focus {
+.btn-icon-refer:hover, .btn-icon-refer:focus {
   background-color: #33B8FF;
-  color: #EEF0F2;
-}
-#btn-skills {
-  background-color: rgba(224, 0, 217, 0.2);
-  color: #E000D9;
-}
-#btn-skills:hover, #btn-skills:focus {
-  background-color: #E000D9;
-  color: #EEF0F2;
-}
-#btn-portfolio {
-  background-color: rgba(0, 196, 154, 0.2);
-  color: #00C49A;
-}
-#btn-portfolio:hover, #btn-portfolio:focus {
-  background-color: #00C49A;
-  color: #EEF0F2;
-}
-#btn-contact {
-  background-color: rgba(221, 90, 64, 0.2);
-  color: #DD5A40;
-}
-#btn-contact:hover, #btn-contact:focus {
-  background-color: #DD5A40;
-  color: #EEF0F2;
-}
-
-.btn {
-  border: none;
-  border-radius: 1.25rem;
-  padding: 0.6rem 1rem;
-  font-size: 1.1rem;
-  box-shadow: 1px 1px 5px #1d1c22;
-}
-.btn-cv {
-  background-color: rgba(255, 153, 10, 0.2);
-  color: #FF990A;
-  max-width: max-content;
-}
-.btn-cv:hover, .btn-cv:focus {
-  background-color: #FF990A;
   color: #EEF0F2;
 }
 
@@ -249,16 +323,6 @@ header nav {
 }
 
 .career-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 9rem;
-  height: 9rem;
-  border-radius: 50%;
-  border: none;
-  font-size: 1rem;
-  text-align: center;
-  padding: 1rem;
   background-color: rgba(255, 56, 100, 0.2);
   color: #FF3864;
   box-shadow: 1px 1px 5px #1d1c22;
@@ -276,6 +340,7 @@ header nav {
 .career-text {
   flex: 100%;
   padding: 1.5rem;
+  height: 15rem;
   order: 4;
 }
 .career-text-hidden {
