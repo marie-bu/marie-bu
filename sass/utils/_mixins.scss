@@ -4,6 +4,13 @@
     border-radius: 50%;
 }
 
+@mixin btn {
+    border: none;
+    border-radius: 1.25rem;
+    padding: 0.6rem 1rem;
+    font-size: 1.1rem;
+}
+
 @mixin btn-color($color) {
     background-color: rgba($color, 0.2);
     color: $color;

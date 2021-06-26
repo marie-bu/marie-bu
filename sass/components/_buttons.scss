@@ -25,3 +25,12 @@
         @include btn-color($color-contact);
     }
 }
+
+.btn {
+    @include btn;
+    @include box-shadow;
+    &-cv {
+        @include btn-color($color-cv);
+        max-width: max-content;
+    }
+}

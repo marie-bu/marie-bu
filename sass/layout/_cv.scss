@@ -1,0 +1,40 @@
+.cv-content {
+    display: flex;
+    @include box-shadow;
+    &-top {
+        height: 27rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-left {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        width: 35%;
+        background-color: $text-grey;
+        color: $bg-grey;
+        padding: 2rem 3rem 8rem 3rem;
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        p {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        }
+    }
+    &-right {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 3rem 8rem 3rem;
+    }
+    h4 {
+        padding-bottom: 2rem;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
+}
