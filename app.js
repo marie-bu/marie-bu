@@ -7,6 +7,9 @@ const sections = document.querySelectorAll(".section");
 const careerTitles = document.querySelectorAll(".career-title");
 const careerTexts = document.querySelectorAll(".career-text");
 
+const btnsMore = document.querySelectorAll(".btn-icon-more");
+const projects = document.querySelectorAll(".project");
+
 // Landing page navigation
 
 landingBtns.forEach((btn)=>{
@@ -34,5 +37,34 @@ careerTitles.forEach((title) => {
                 text.classList.add("career-text-hidden");
             }
         });
+    });
+});
+
+// Portfolio
+
+projects.forEach((project)=> {
+    project.addEventListener("mouseover", ()=> {
+        let main = project.querySelector(".project-main");
+        let details = project.querySelector(".project-details");
+        console.log(main + details);
+        main.classList.add("project-main-hidden");
+        details.classList.add("project-details-active");
+    })
+    project.addEventListener("mouseout", ()=> {
+        let main = project.querySelector(".project-main");
+        let details = project.querySelector(".project-details");
+        console.log(main + details);
+        main.classList.remove("project-main-hidden");
+        details.classList.remove("project-details-active");
+    })
+})
+
+btnsMore.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        let main = btn.parentNode.previousElementSibling.previousElementSibling;
+        let details = btn.parentNode.previousElementSibling;
+        main.classList.toggle("project-main-hidden");
+        details.classList.toggle("project-details-active");
+        btn.blur();
     });
 });

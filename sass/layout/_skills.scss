@@ -1,0 +1,19 @@
+#skills {
+    i {
+        padding: 0 5px;
+        color: $color-skills;
+    }
+    p {
+        display: inline-flex;
+        gap: 3rem;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        max-height: 8rem;
+        width: 80%;
+        margin-top: 2rem;
+    }
+}

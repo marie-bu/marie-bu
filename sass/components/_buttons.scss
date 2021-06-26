@@ -66,9 +66,7 @@
             }
         }
     }
-    &-refer {
+    &-xs {
         @include circle(2rem, 1rem);
-        @include btn-color($color-refer);
-        margin: 0.5rem;
     }
 }
