@@ -1,7 +1,9 @@
-@mixin circle($rem) {
+@mixin circle($rem, $font-size) {
     width: $rem;
     height: $rem;
     border-radius: 50%;
+    border: none;
+    font-size: $font-size;
 }
 
 @mixin btn {

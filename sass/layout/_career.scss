@@ -1,0 +1,31 @@
+#career {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.career {
+    &-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include circle(9rem, 1rem);
+    text-align: center;
+    padding: 1rem;
+    @include btn-color($color-career);
+    @include box-shadow;
+    cursor: pointer;
+        &-active {
+            background-color: $color-career;
+            color: $bg-grey;
+            box-shadow: inset 1px 1px 5px $color-shadow;
+        }
+    }
+    &-text {
+        flex: 100%;
+        padding: 1.5rem;
+        order: 4;
+        &-hidden {
+            display: none;
+        }
+    }
+}

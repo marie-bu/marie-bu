@@ -1,8 +1,6 @@
 .btn-circle {
-    @include circle(13rem);
-    border: none;
-    font-size: 1.2rem;
-    margin: auto;
+    @include circle(13rem, 1.2rem);
+    //margin: auto;
     @include box-shadow;
 }
 #btn {
