@@ -28,7 +28,7 @@
         .project-title {
             text-align: center;
         }
-        &-hidden {
+        &.hidden {
             opacity: 0.6;
         }
     }
@@ -49,7 +49,7 @@
             display: none;
         }
         p {
-            background-color: $bg-grey;
+            background-color: var(--bg-grey);
             padding-top: 0.7rem;
         }
         &-skills {
@@ -57,10 +57,10 @@
             flex-wrap: wrap;
             gap: 0.2rem 1.5rem;
             padding: 1.5rem 0 0.7rem;
-            background-color: $bg-grey;
-            border-bottom: 1px $text-grey solid;
+            background-color: var(--bg-grey);
+            border-bottom: 1px var(--text-grey) solid;
         }
-        &-active {
+        &.active {
             transform: scaleY(100%);
         }
     }

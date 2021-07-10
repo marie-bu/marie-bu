@@ -1,16 +1,17 @@
-.section {
+section {
     display: none;
     flex-direction: column;
     gap: 3rem;
     align-items: center;
     min-height: 100vh;
-    padding: $padding-section;
-    &-active {
+    margin-top: -4rem;
+    padding: 10rem 6rem 6rem 6rem ;
+    &.active {
         display: flex;
     }
-}
-
-#navigation {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    .contact-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
 }

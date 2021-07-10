@@ -17,6 +17,10 @@
     &-contact {
         @include btn-color($color-contact);
     }
+    &-home {
+        @include btn;
+        @include btn-color(var(--text-grey));
+    }
 }
 
 .btn-circle {
@@ -24,7 +28,8 @@
     @include box-shadow;
     &-l {
         @include circle(13rem, 1.2rem);
-        margin: auto;
+        background-color: var(--bg-grey);
+        transition: 250ms ease-out;
     }
     &-m {
         @include circle(9rem, 1rem);
@@ -39,34 +44,62 @@
     @include box-shadow;
     &-contact {
         @include circle(6rem, 3rem);
-        margin: 2rem;
-        background-color: rgba($color: $color-contact, $alpha: 0.2);
-        #red-malt, #white-malt {
+        img {
             @include circle(3rem, 1rem);
         }
-        #white-malt {
+        #malt-dark, #malt-light {
             display: none;
         }
-        .fa-github {
-            color: #24292e;
-        }
-        .fa-linkedin {
-            color: #0e76a8;
-        }
         &:hover, &:focus {
-            background-color: $color-contact;
-            #red-malt {
+            #malt-contact {
                 display: none;
             }
-            #white-malt {
-                display: block;
+            #malt-dark {
+                display: inline-block;
             }
-            i {
-                color: $bg-grey;
+            &.light-mode {
+                #malt-dark {
+                    display: none;
+                }
+                #malt-light {
+                    display: inline-block;
+                }
             }
         }
     }
+    &-s {
+        @include circle(2.5rem, 1.25rem);
+    }
     &-xs {
         @include circle(2rem, 1rem);
+    }
+    &#send-mail {
+        margin-left: 1.5rem;
+        i {
+            margin-left: -0.15rem
+        }
+    }
+}
+
+.btn-switch {
+    @include btn;
+    width: 2.75rem;
+    height: 2rem;
+    &-dark {
+        background-color: #403F4C;
+        color: #EEF0F2;
+        border-top-left-radius: 2.25rem;
+        border-bottom-left-radius: 2.25rem;
+
+    }
+    &-light {
+        background-color: #EEF0F2;
+        color: #403F4C;
+        border-top-right-radius: 2.25rem;
+        border-bottom-right-radius: 2.25rem;
+
+    }
+    &.active {
+        box-shadow: inset 1px 1px 5px $color-shadow;
     }
 }

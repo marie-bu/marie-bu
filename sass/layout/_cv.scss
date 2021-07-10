@@ -1,6 +1,8 @@
 .cv-content {
+    position: relative;
     display: flex;
     @include box-shadow;
+    isolation: isolate;
     &-top {
         height: 27rem;
         display: flex;
@@ -12,8 +14,8 @@
         flex-direction: column;
         gap: 2.5rem;
         width: 35%;
-        background-color: $text-grey;
-        color: $bg-grey;
+        background-color: var(--text-grey);
+        color: var(--bg-grey);
         padding: 2rem 3rem 8rem 3rem;
         img {
             width: 100%;
@@ -23,6 +25,7 @@
         display: flex;
         gap: 1rem;
         align-items: center;
+        white-space: nowrap;
         }
     }
     &-right {
@@ -36,5 +39,18 @@
     }
     p {
         margin-bottom: 1rem;
+    }
+}
+#download-cv {
+    position: absolute;
+    top: -3rem;
+    right: -3rem;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 50%;
+        background-color: var(--bg-grey);
     }
 }

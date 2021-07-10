@@ -13,31 +13,48 @@
 
 <body>
     <header>
-        <img src="pictures/profile.png" alt="">
+        <img src="pictures/profile-header.png" alt="">
         <h1>Marie Burki</h1>
         <h2>Développeuse front-end</h2>
-        <!--<button class="btn-icon btn-icon-nav"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        <button class="btn-icon btn-icon-nav" id="btn-nav-mobile"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
         <nav class="nav">
-            <a href="#cv" class="btn-icon btn-icon-nav-link h3">Curriculum Vitae</a>
-            <a href="#career" class="btn-icon btn-icon-nav-link h3">Ma reconversion</a>
-            <a href="#refer" class="btn-icon btn-icon-nav-link h3">Recommandation</a>
-            <a href="#skills" class="btn-icon btn-icon-nav-link h3">Compétences</a>
-            <a href="#portfolio" class="btn-icon btn-icon-nav-link h3">Portfolio</a>
-            <a href="#contact" class="btn-icon btn-icon-nav-link h3">Contact</a>-->
+            <button class="cv btn-cv btn-icon btn-icon-s"><i class="fas fa-user-alt"></i><span id="span-cv">CV</span></button>
+            <button class="career btn-career btn-icon btn-icon-s"><i class="fas fa-comment"></i><span>Parcours</span></button>
+            <button class="refer btn-refer btn-icon btn-icon-s"><i class="fas fa-thumbs-up"></i><span>Recommandation</span></button>
+            <button class="skills btn-skills btn-icon btn-icon-s"><i class="fas fa-tools"></i><span>Compétences</span></button>
+            <button class="portfolio btn-portfolio btn-icon btn-icon-s"><i class="fas fa-laptop-code"></i><span>Portfolio</span></button>
+            <button class="contact btn-contact btn-icon btn-icon-s"><i class="fas fa-envelope"></i><span>Contact</span></button>
+            <button class="home btn-home btn-icon-s"><i class="fas fa-home"></i></button>
         </nav>
+        <div class="switch-mode">
+            <button class="btn-switch-dark btn-switch active"><i class="fas fa-moon"></i></button>
+            <button class="btn-switch-light btn-switch"><i class="fas fa-sun"></i></button>
+        </div>
     </header>
 
     <main>
-        <section class="section section-active" id="navigation">
-            <button class="cv btn-cv btn-circle btn-circle-l" id="btn-cv">Curriculum Vitae</button>
-            <button class="career btn-career btn-circle btn-circle-l" id="btn-career">Ma reconversion</button>
-            <button class="refer btn-refer btn-circle btn-circle-l" id="btn-refer">Recommandation</button>
-            <button class="skills btn-skills btn-circle btn-circle-l" id="btn-skills">Compétences</button>
-            <button class="portfolio btn-portfolio btn-circle btn-circle-l" id="btn-portfolio">Portfolio</button>
-            <button class="contact btn-contact btn-circle btn-circle-l" id="btn-contact">Contact</button>
+        <section class="active" id="home">
+            <div class="home-bg bg-cv">
+                <button class="cv btn-cv btn-circle btn-circle-l" id="btn-cv">Curriculum Vitae</button>
+            </div>
+            <div class="home-bg bg-career">
+                <button class="career btn-career btn-circle btn-circle-l" id="btn-career">Parcours</button>
+            </div>
+            <div class="home-bg bg-refer">
+                <button class="refer btn-refer btn-circle btn-circle-l" id="btn-refer">Recommandation</button>
+            </div>
+            <div class="home-bg bg-skills">
+                <button class="skills btn-skills btn-circle btn-circle-l" id="btn-skills">Compétences</button>
+            </div>
+            <div class="home-bg bg-portfolio">
+                <button class="portfolio btn-portfolio btn-circle btn-circle-l" id="btn-portfolio">Portfolio</button>
+            </div>
+            <div class="home-bg bg-contact">
+                <button class="contact btn-contact btn-circle btn-circle-l" id="btn-contact">Contact</button>
+            </div>
         </section>
-        
-        <section class="section" id="cv">
+
+        <section id="cv">
             <div class="cv-content">
                 <div class="cv-content-left">
                     <div class="cv-content-top">
@@ -126,13 +143,14 @@
                         </p>
                     </div>
                 </div>
+                <a href="CV - Marie Burki.pdf" download class="btn-cv btn-circle btn-circle-s" target="blank"
+                    id="download-cv">Télécharger PDF</a>
             </div>
-            <a href="CV - Marie Burki.pdf" download class="btn-cv btn-circle btn-circle-s" id="download-cv">Télécharger PDF</a>
         </section>
 
-        <section class="section" id="career">
+        <section id="career">
             <h3 class="before career-title btn-career btn-circle btn-circle-m">Parcours antérieur</h3>
-            <p class="before career-text career-text-hidden">Ancienne étudiante à l'université, je m'intéressais
+            <p class="before career-text hidden">Ancienne étudiante à l'université, je m'intéressais
                 aux pays et aux religions orientales (l'Inde et le Bouddhisme particulièrement). L'intérêt
                 reste, à titre personnel, mais professionnellement cette voie manquait de concret à mon
                 goût.<br>
@@ -142,8 +160,9 @@
                 Mais, en 2019, l'arrivée de mon fils initia une réflexion sur mes envies et projets
                 professionnels à long terme.
             </p>
-            <h3 class="change career-title career-title-active btn-career btn-circle btn-circle-m">Pourquoi le développement front-end ?</h3>
-            <p class="change career-text">Même si j'aime mon précédent métier, j'ai toujours
+            <h3 class="change career-title btn-career btn-circle btn-circle-m">Pourquoi le développement front-end ?
+            </h3>
+            <p class="change career-text hidden">Même si j'aime mon précédent métier, j'ai toujours
                 su que je ne voulais pas l'exercer toute ma vie. En réfléchissant plus sérieusement à la
                 direction que je voulais prendre, deux facteurs majeurs m'amenèrent sur ma nouvelle voie.<br>
                 Le premier était l'envie d'apprendre quelque chose de nouveau ; des années après mes études,
@@ -156,8 +175,8 @@
                 C'est ainsi que je me suis lancée dans l'apprentissage du développement front-end. Sans regret,
                 car depuis que j'ai commencé à coder, je découvre un métier que j'adore.
             </p>
-            <h3 class="after career-title btn-career btn-circle btn-circle-m">Parcours de développeuse</h3>
-            <p class="after career-text career-text-hidden">Fin 2020, je suis maman au foyer et j'entame le parcours diplômant de
+            <h3 class="after career-title btn-career btn-circle btn-circle-m active">Parcours de développeuse</h3>
+            <p class="after career-text">Fin 2020, je suis maman au foyer et j'entame le parcours diplômant de
                 développeur front-end d'OpenClassrooms pendant mon temps libre.<br>
                 Mais à un tiers du parcours, des contraintes de temps et d'argent me poussent à m'adapter et je
                 me lance dans la rechercher d'un poste en alternance pour le reste de la formation.<br>
@@ -169,7 +188,7 @@
             </p>
         </section>
 
-        <section class="section" id="refer">
+        <section id="refer">
             <h3>"Une de mes meilleures étudiantes"</h3>
             <h4>Recommandation d'Ibrahima Ciss, ingénieur logiciel web & iOS, mentor chez OpenClassrooms</h4>
             <quote>" J'ai eu l'occasion de mentorer Marie sur plusieurs projets. Malgré qu'elle soit Junior
@@ -177,10 +196,11 @@
                 mentorer. Elle est très pragmatique et perfectionniste, elle cherche toujours à améliorer/parfaire
                 la solution existante. En outre elle a une bonne maitrise des technologies du Web. Si vous voulez
                 des applications optimisées et accessible pour tous, je vous conseille fortement Marie. "</quote>
-            <p>Reçue sur Malt <a href="http://malt.fr/profile/marieb" target="_blank" class="btn-refer btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a></p>
+            <p>Reçue sur Malt <a href="http://malt.fr/profile/marieb" target="_blank"
+                    class="btn-refer btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a></p>
         </section>
 
-        <section class="section" id="skills">
+        <section id="skills">
             <h3>Compétences sur le parcours diplômant d'OpenClassrooms</h3>
             <p class="bold">
                 <span class="perso"><i class="fas fa-heart"></i>Personnelles</span>
@@ -206,7 +226,7 @@
             </ul>
         </section>
 
-        <section class="section" id="portfolio">
+        <section id="portfolio">
             <h3>Projets personnels</h3>
             <div class="projects-perso">
                 <div class="project perso-portfolio">
@@ -230,8 +250,10 @@
                         <p></p>
                     </div>
                     <div class="project-links">
-                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i class="fas fa-ellipsis-v"></i></button>
-                        <a href="" target="blank" class="btn-portfolio btn-icon btn-icon-xs"><i class="fab fa-github"></i></a>
+                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i
+                                class="fas fa-ellipsis-v"></i></button>
+                        <a href="" target="blank" class="btn-portfolio btn-icon btn-icon-xs"><i
+                                class="fab fa-github"></i></a>
                     </div>
                 </div>
 
@@ -403,15 +425,23 @@
             </div>
         </section>
 
-        <section class="section" id="contact">
+        <section id="contact">
             <p>Vous pouvez m'écrire à l'adresse mail suivante :<br>
-                <a href="mailto:marie.buerki@gmail.com" class="bold">marie.buerki@gmail.com</a><br>
-                ou me contacter via les plateformes ci-dessous :
+                <span class="bold">marie.buerki@gmail.com<a href="mailto:marie.buerki@gmail.com" target="_blank"
+                        class="btn-contact btn-icon btn-icon-xs" id="send-mail"><i
+                            class="far fa-paper-plane"></i></a></span><br>
+                Ou me contacter via les plateformes ci-dessous :
             </p>
-            <div>
-                <a href="http://malt.fr/profile/marieb" target="_blank" class="btn-icon btn-icon-contact"><img src="pictures/malt-white-s.png" alt="" id="white-malt"><img src="pictures/malt-red-s.png" alt="" id="red-malt"></a>
-                <a href="https://github.com/marie-bu" target="_blank" class="btn-icon btn-icon-contact"><i class="fab fa-github"></i></a>
-                <a href="www.linkedin.com/in/marie-bu" target="blank" class="btn-icon btn-icon-contact"><i class="fab fa-linkedin"></i></a>
+            <div class="contact-icons">
+                <a href="http://malt.fr/profile/marieb" target="_blank" class="btn-contact btn-icon btn-icon-contact"
+                    id="malt-btn">
+                    <img src="pictures/malt-contact.png" alt="" id="malt-contact">
+                    <img src="pictures/malt-dark.png" alt="" id="malt-dark">
+                    <img src="pictures/malt-light.png" alt="" id="malt-light"></a>
+                <a href="https://github.com/marie-bu" target="_blank" class="btn-contact btn-icon btn-icon-contact">
+                    <i class="fab fa-github"></i></a>
+                <a href="www.linkedin.com/in/marie-bu" target="blank" class="btn-contact btn-icon btn-icon-contact">
+                    <i class="fab fa-linkedin"></i></a>
             </div>
         </section>
     </main>

@@ -20,10 +20,17 @@
     color: $color;
     &:hover, &:focus {
         background-color: $color;
-        color: $bg-grey;
+        color: var(--bg-grey);
     }
 }
 
 @mixin box-shadow {
-    box-shadow: 1px 1px 5px $color-shadow;
+    box-shadow: 1px 1px 3px $color-shadow;
+}
+
+@mixin home-bg($color) {
+    background-color: $color;
+    &:hover, &:focus {
+        background-color: rgba($color: $color, $alpha: 0.6);
+    }
 }

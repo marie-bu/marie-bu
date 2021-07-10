@@ -1,0 +1,41 @@
+#home {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+    margin-top: -4rem;
+    padding-top: 4rem;
+    gap: 0;
+    flex-direction: row;
+    .home-bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        isolation: isolate;
+        transition: 200ms ease-out 100ms;
+    }
+}
+
+.bg {
+    &-cv {
+        @include home-bg($color-cv);
+    }
+    &-career {
+        @include home-bg($color-career);
+    }
+    &-refer {
+        @include home-bg($color-refer);
+    }
+    &-skills {
+        @include home-bg($color-skills);
+    }
+    &-portfolio {
+        @include home-bg($color-portfolio);
+    }
+    &-contact {
+        @include home-bg($color-contact);
+    }
+}

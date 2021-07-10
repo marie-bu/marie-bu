@@ -3,15 +3,16 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+    
 .career {
     &-title {
     @include btn-color($color-career);
     @include box-shadow;
     cursor: pointer;
-        &-active {
+        &.active {
             background-color: $color-career;
-            color: $bg-grey;
-            box-shadow: inset 1px 1px 5px $color-shadow;
+            color: var(--bg-grey);
+            box-shadow: inset 1px 1px 3px $color-shadow;
         }
     }
     &-text {
@@ -19,7 +20,7 @@
         padding: 1.5rem;
         height: 15rem;
         order: 4;
-        &-hidden {
+        &.hidden {
             display: none;
         }
     }

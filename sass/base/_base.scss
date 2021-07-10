@@ -4,10 +4,19 @@
     padding: 0;
 }
 
+:root {
+    --text-grey: #EEF0F2;
+    --bg-grey: #403F4C;
+    &.light-mode {
+        --text-grey: #403F4C;
+        --bg-grey: #EEF0F2;
+    }
+}
+
 html {
     position: relative;
     //max-width: 3000px;
-    background-color: $bg-grey;
+    background-color: var(--bg-grey);
     margin: auto;
     scroll-behavior: smooth;
     font-size: 100%;
