@@ -15,6 +15,8 @@ const sections = document.querySelectorAll("section");
 const careerTitles = document.querySelectorAll(".career-title");
 const careerTexts = document.querySelectorAll(".career-text");
 
+const projectsBtnsContainer = document.querySelector(".projects-btns");
+const projectsBtns = projectsBtnsContainer.querySelectorAll("button");
 const btnsMore = document.querySelectorAll(".btn-icon-more");
 const projects = document.querySelectorAll(".project");
 
@@ -72,7 +74,6 @@ careerTitles.forEach((title) => {
             if (text.classList[0] === title.classList[0]) {
                 text.classList.remove("hidden");
                 title.classList.add("active");
-                console.log(title);
             } else {
                 text.classList.add("hidden");
             }
@@ -82,29 +83,25 @@ careerTitles.forEach((title) => {
 
 // Portfolio
 
-projects.forEach((project)=> {
-    project.addEventListener("mouseover", ()=> {
-        let main = project.querySelector(".project-main");
-        let details = project.querySelector(".project-details");
-        console.log(main + details);
-        main.classList.add("hidden");
-        details.classList.add("active");
-    })
-    project.addEventListener("mouseout", ()=> {
-        let main = project.querySelector(".project-main");
-        let details = project.querySelector(".project-details");
-        console.log(main + details);
-        main.classList.remove("hidden");
-        details.classList.remove("active");
-    })
-})
+projectsBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        projectsBtns.forEach(b => b.classList.remove("active"));
+        projects.forEach((project) => {
+            if (project.classList[0] === btn.classList[0]) {
+                project.classList.add("active");
+                btn.classList.add("active");
+            } else {
+                project.classList.remove("active");
+                project.querySelector(".project-img").classList.remove("hidden");
+            }
+        });
+    });
+});
 
 btnsMore.forEach((btn) => {
     btn.addEventListener("click", () => {
-        let main = btn.parentNode.previousElementSibling.previousElementSibling;
-        let details = btn.parentNode.previousElementSibling;
-        main.classList.toggle("hidden");
-        details.classList.toggle("active");
+        let image = btn.parentNode.previousElementSibling;
+        image.classList.toggle("hidden");
         btn.blur();
     });
 });

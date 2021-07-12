@@ -37,6 +37,9 @@
     &-s {
         @include circle(7rem, 1rem);
     }
+    &-xs {
+        @include circle(5rem, 1rem);
+    }
 }
 
 .btn-icon {
@@ -78,6 +81,14 @@
         i {
             margin-left: -0.15rem
         }
+    }
+    &-more {
+        position: absolute;
+        top: 50%; left: -1rem;
+        padding-right: 0.3rem;
+        margin-top: -1rem;
+        transition: inherit;
+        box-shadow: none;
     }
 }
 
