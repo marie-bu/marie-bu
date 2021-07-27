@@ -1,69 +1,91 @@
 // DOM elements
 
-const lightModeBtn = document.querySelector(".btn-switch-light");
-const darkModeBtn = document.querySelector(".btn-switch-dark");
-const root = document.querySelector(":root");
-const contactMaltBtn = document.querySelector("#malt-btn");
+const buttons = document.querySelectorAll("button");
+const links = document.querySelectorAll("a");
 
-const nav = document.querySelector("nav");
-const navBtns = nav.querySelectorAll(".btn-icon-s");
+const lightModeSwitch = document.querySelector(".switch-mode");
+const root = document.querySelector(":root");
+
 const header = document.querySelector("header");
-const home = document.querySelector("section#home");
+const navBtns = document.querySelectorAll("nav .btn-icon-s");
+const returnHomeBtn = document.querySelector("nav .btn-home");
+const home = document.querySelector("#home");
 const homeBtns = home.querySelectorAll(".btn-circle");
-const sections = document.querySelectorAll("section");
+const main = document.querySelector("main");
+const sections = document.querySelectorAll(".section");
 
 const careerTitles = document.querySelectorAll(".career-title");
 const careerTexts = document.querySelectorAll(".career-text");
 
-const projectsBtnsContainer = document.querySelector(".projects-btns");
+const projectsBtnsContainer = document.querySelector(".btns");
 const projectsBtns = projectsBtnsContainer.querySelectorAll("button");
 const btnsMore = document.querySelectorAll(".btn-icon-more");
 const projects = document.querySelectorAll(".project");
 
+// buttons and links - focus blur
+
+buttons.forEach(btn => btn.addEventListener("click", () => {
+    btn.blur();
+}));
+
+links.forEach(link => link.addEventListener("click", () => {
+    link.blur();
+}));
+
 // light-mode 
 
-lightModeBtn.addEventListener("click", ()=>{
-    lightModeBtn.classList.add("active");
-    darkModeBtn.classList.remove("active");
-    root.classList.add("light-mode");
-    contactMaltBtn.classList.add("light-mode");
+lightModeSwitch.addEventListener("click", () => {
+    lightModeSwitch.classList.toggle("dark-mode");
+    root.classList.toggle("dark-mode");
 });
-
-darkModeBtn.addEventListener("click", ()=>{
-    darkModeBtn.classList.add("active");
-    lightModeBtn.classList.remove("active");
-    root.classList.remove("light-mode");
-    contactMaltBtn.classList.remove("light-mode");
-})
 
 // Navigation
 
-navBtns.forEach((btn)=>{
-    btn.addEventListener("click", ()=>{
-        if (btn.classList[0] === "home")
-            header.classList.remove("active");
-        sections.forEach((section)=>{
-            if (section.id === btn.classList[0]) {
-                section.classList.add("active");
-            } else {
-                section.classList.remove("active");
-            }
-        });
+homeBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        home.classList.add("narrowed");
+        btn.classList.add("active");
+        header.classList.add("narrowed");
+        main.classList.add("active");
     });
 });
 
-homeBtns.forEach((btn)=>{
-    btn.addEventListener("click", ()=>{
-        header.classList.add("active");
-        sections.forEach((section)=>{
-            if (section.id === btn.classList[0]) {
-                section.classList.add("active");
-            } else {
-                section.classList.remove("active");
-            }
-        });
-    });
+returnHomeBtn.addEventListener("click", () => {
+    home.classList.remove("narrowed");
+    homeBtns.forEach(btn => btn.classList.remove("active"));
+    header.classList.remove("narrowed");
+    main.classList.remove("active");
 });
+
+// Change nav buttons' display when corresponding section on screen (works for scroll and for click)
+
+let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.25
+}
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry=> {
+        if (!entry.isIntersecting) {
+            navBtns.forEach(btn=> {
+                if (btn.classList[1] === entry.target.id) {
+                    btn.classList.remove("active");
+                }
+            });
+        } else {
+            navBtns.forEach(btn=> {
+                if (btn.classList[1] === entry.target.id) {
+                    btn.classList.add("active");
+                    console.log(btn);
+                }
+            });
+        }
+    });
+}, options);
+
+
+sections.forEach(section => observer.observe(section));
 
 // Career 
 
@@ -102,6 +124,5 @@ btnsMore.forEach((btn) => {
     btn.addEventListener("click", () => {
         let image = btn.parentNode.previousElementSibling;
         image.classList.toggle("hidden");
-        btn.blur();
     });
 });

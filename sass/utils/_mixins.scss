@@ -2,7 +2,6 @@
     width: $rem;
     height: $rem;
     border-radius: 50%;
-    border: none;
     font-size: $font-size;
 }
 
@@ -15,22 +14,22 @@
     padding: 1rem;
 }
 
-@mixin btn-color($color) {
-    background-color: rgba($color, 0.2);
-    color: $color;
+@mixin btn-color($light, $dark) {
+    background-color: $light;
+    color: $dark;
+    transition: $short-trans ease-in-out;
     &:hover, &:focus {
-        background-color: $color;
-        color: var(--bg-grey);
+        background-color: $dark;
+        color: $light;
+        box-shadow: 3px 3px 9px $color-shadow;
+    }
+    &.active {
+        background-color: $dark;
+        color: $light;
+        box-shadow: inset 1px 1px 3px $color-shadow;
     }
 }
 
 @mixin box-shadow {
     box-shadow: 1px 1px 3px $color-shadow;
-}
-
-@mixin home-bg($color) {
-    background-color: $color;
-    &:hover, &:focus {
-        background-color: rgba($color: $color, $alpha: 0.6);
-    }
 }

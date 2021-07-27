@@ -1,35 +1,34 @@
 .btn {
     &-cv {
-        @include btn-color($color-cv);
+        @include btn-color(var(--cv-bg), var(--cv-text));
     }
     &-career {
-        @include btn-color($color-career);
+        @include btn-color(var(--career-bg), var(--career-text));
     }
     &-refer {
-        @include btn-color($color-refer);
+        @include btn-color(var(--refer-bg), var(--refer-text));
     }
     &-skills {
-        @include btn-color($color-skills);
+        @include btn-color(var(--skills-bg), var(--skills-text));
     }
     &-portfolio {
-        @include btn-color($color-portfolio);
+        @include btn-color(var(--portfolio-bg), var(--portfolio-text));
     }
     &-contact {
-        @include btn-color($color-contact);
+        @include btn-color(var(--contact-bg), var(--contact-text));
     }
     &-home {
         @include btn;
-        @include btn-color(var(--text-grey));
+        @include btn-color(var(--bg-grey), var(--text-grey));
     }
 }
 
 .btn-circle {
+    position: relative;
     @include btn;
     @include box-shadow;
     &-l {
-        @include circle(13rem, 1.2rem);
-        background-color: var(--bg-grey);
-        transition: 250ms ease-out;
+        @include circle(13rem, 1.3rem);
     }
     &-m {
         @include circle(9rem, 1rem);
@@ -38,7 +37,7 @@
         @include circle(7rem, 1rem);
     }
     &-xs {
-        @include circle(5rem, 1rem);
+        @include circle(5rem, 0.9rem);
     }
 }
 
@@ -50,23 +49,15 @@
         img {
             @include circle(3rem, 1rem);
         }
-        #malt-dark, #malt-light {
+        #malt-light {
             display: none;
         }
         &:hover, &:focus {
-            #malt-contact {
+            #malt-dark {
                 display: none;
             }
-            #malt-dark {
+            #malt-light {
                 display: inline-block;
-            }
-            &.light-mode {
-                #malt-dark {
-                    display: none;
-                }
-                #malt-light {
-                    display: inline-block;
-                }
             }
         }
     }
@@ -89,28 +80,5 @@
         margin-top: -1rem;
         transition: inherit;
         box-shadow: none;
-    }
-}
-
-.btn-switch {
-    @include btn;
-    width: 2.75rem;
-    height: 2rem;
-    &-dark {
-        background-color: #403F4C;
-        color: #EEF0F2;
-        border-top-left-radius: 2.25rem;
-        border-bottom-left-radius: 2.25rem;
-
-    }
-    &-light {
-        background-color: #EEF0F2;
-        color: #403F4C;
-        border-top-right-radius: 2.25rem;
-        border-bottom-right-radius: 2.25rem;
-
-    }
-    &.active {
-        box-shadow: inset 1px 1px 5px $color-shadow;
     }
 }

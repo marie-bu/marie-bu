@@ -1,0 +1,25 @@
+.switch-mode {
+    position: absolute;
+    z-index: 3;
+    bottom: 1rem; left: 1.5rem;
+    padding: 0.2rem;
+    width: 3rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: var(--middle-grey);
+    @include box-shadow;
+    cursor: pointer;
+    transition: $short-trans ease-in-out;
+    .slider {
+        @include circle(1.1rem, none);
+        background-color: var(--text-grey);
+        transform: translateX(0);
+        transition: inherit;
+    }
+    &.dark-mode {
+        .slider {
+            transform: translateX(1.5rem);
+        }
+    }
+}

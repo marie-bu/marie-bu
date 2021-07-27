@@ -31,6 +31,7 @@
     &-right {
         display: flex;
         flex-direction: column;
+        background-color: var(--bg-grey);
         gap: 2rem;
         padding: 2rem 3rem 8rem 3rem;
     }
@@ -45,12 +46,4 @@
     position: absolute;
     top: -3rem;
     right: -3rem;
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        border-radius: 50%;
-        background-color: var(--bg-grey);
-    }
 }

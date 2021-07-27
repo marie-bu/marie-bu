@@ -12,53 +12,59 @@
 </head>
 
 <body>
-    <header>
-        <img src="pictures/profile-header.png" alt="">
-        <h1>Marie Burki</h1>
-        <h2>Développeuse front-end</h2>
-        <button class="btn-icon btn-icon-nav" id="btn-nav-mobile"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
-        <nav class="nav">
-            <button class="cv btn-cv btn-icon btn-icon-s"><i class="fas fa-user-alt"></i><span id="span-cv">CV</span></button>
-            <button class="career btn-career btn-icon btn-icon-s"><i class="fas fa-comment"></i><span>Parcours</span></button>
-            <button class="refer btn-refer btn-icon btn-icon-s"><i class="fas fa-thumbs-up"></i><span>Recommandation</span></button>
-            <button class="skills btn-skills btn-icon btn-icon-s"><i class="fas fa-tools"></i><span>Compétences</span></button>
-            <button class="portfolio btn-portfolio btn-icon btn-icon-s"><i class="fas fa-laptop-code"></i><span>Portfolio</span></button>
-            <button class="contact btn-contact btn-icon btn-icon-s"><i class="fas fa-envelope"></i><span>Contact</span></button>
-            <button class="home btn-home btn-icon-s"><i class="fas fa-home"></i></button>
-        </nav>
-        <div class="switch-mode">
-            <button class="btn-switch-dark btn-switch active"><i class="fas fa-moon"></i></button>
-            <button class="btn-switch-light btn-switch"><i class="fas fa-sun"></i></button>
-        </div>
-    </header>
+    <!--<button class="btn-icon btn-icon-nav" id="btn-nav-mobile"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>-->
 
+    <header>
+        <div class="profile">
+            <img src="pictures/profile.png" alt="" class="btn-circle-l">
+            <h1>Marie Burki</h1>
+            <h2 class="normal-uppercase">Développeuse Web<br><span class="light-uppercase">front-end</span></h2>
+            <div class="profile-contact">
+                <a href="mailto:marie.buerki@gmail.com" target="_blank"
+                class="btn-home btn-icon-xs"><i class="fas fa-at"></i></a>
+                <a href="https://github.com/marie-bu" target="_blank" class="btn-home btn-icon-xs">
+                    <i class="fab fa-github"></i></a>
+                <a href="http://linkedin.com/in/marie-bu" target="blank" class="btn-home btn-icon-xs">
+                    <i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <nav>
+            <a href="#cv" class="btn-cv cv btn-icon btn-icon-s"><i class="fas fa-user-alt"></i><span id="span-cv">CV</span></a>
+            <a href="#career" class="btn-career career btn-icon btn-icon-s"><i class="fas fa-comment"></i><span>Parcours</span></a>
+            <a href="#refer" class="btn-refer refer btn-icon btn-icon-s"><i
+                class="fas fa-thumbs-up"></i><span>Recommandation</span></a>
+            <a href="#skills" class="btn-skills skills btn-icon btn-icon-s"><i
+                class="fas fa-tools"></i><span>Compétences</span></a>
+            <a href="#portfolio" class="btn-portfolio portfolio btn-icon btn-icon-s"><i
+                class="fas fa-laptop-code"></i><span>Portfolio</span></a>
+            <a href="#contact" class="btn-contact contact btn-icon btn-icon-s"><i
+                class="fas fa-envelope"></i><span>Contact</span></a>
+            <button class="btn-home btn-icon-s"><i class="fas fa-home"></i></button>
+        </nav>
+        <button class="switch-mode">
+            <div class="slider"></div>
+        </button>
+    </header>
+                            
     <main>
-        <section class="active" id="home">
-            <div class="home-bg bg-cv">
-                <button class="cv btn-cv btn-circle btn-circle-l" id="btn-cv">Curriculum Vitae</button>
-            </div>
-            <div class="home-bg bg-career">
-                <button class="career btn-career btn-circle btn-circle-l" id="btn-career">Parcours</button>
-            </div>
-            <div class="home-bg bg-refer">
-                <button class="refer btn-refer btn-circle btn-circle-l" id="btn-refer">Recommandation</button>
-            </div>
-            <div class="home-bg bg-skills">
-                <button class="skills btn-skills btn-circle btn-circle-l" id="btn-skills">Compétences</button>
-            </div>
-            <div class="home-bg bg-portfolio">
-                <button class="portfolio btn-portfolio btn-circle btn-circle-l" id="btn-portfolio">Portfolio</button>
-            </div>
-            <div class="home-bg bg-contact">
-                <button class="contact btn-contact btn-circle btn-circle-l" id="btn-contact">Contact</button>
-            </div>
+        <section id="home">
+            <a href="#cv" class="btn-cv btn-circle btn-circle-l btn-1" id="btn-cv">Curriculum Vitae</a>
+            <a href="#career" class="btn-career btn-circle btn-circle-l btn-2" id="btn-career">Parcours</a>
+            <a href="#refer" class="btn-refer btn-circle btn-circle-l btn-3"
+                id="btn-refer">Recommandation</a>
+            <a href="#skills" class="btn-skills btn-circle btn-circle-l btn-4"
+                id="btn-skills">Compétences</a>
+            <a href="#portfolio" class="btn-portfolio btn-circle btn-circle-l btn-5"
+                id="btn-portfolio">Portfolio</a>
+            <a href="#contact" class="btn-contact btn-circle btn-circle-l btn-6"
+                id="btn-contact">Contact</a>
         </section>
 
-        <section id="cv">
+        <section class="section" id="cv">
             <div class="cv-content">
                 <div class="cv-content-left">
                     <div class="cv-content-top">
-                        <img src="pictures/profile-cv.png" alt="">
+                        <img src="pictures/profile.png" alt="">
                     </div>
                     <div class="cv-content-left-contact">
                         <h4>Marie Burki</h4>
@@ -148,12 +154,11 @@
             </div>
         </section>
 
-        <section id="career">
+        <section class="section" id="career">
             <h3 class="before career-title btn-career btn-circle btn-circle-m">Parcours antérieur</h3>
-            <p class="before career-text hidden">Ancienne étudiante à l'université, je m'intéressais
-                aux pays et aux religions orientales (l'Inde et le Bouddhisme particulièrement). L'intérêt
-                reste, à titre personnel, mais professionnellement cette voie manquait de concret à mon
-                goût.<br>
+            <p class="before career-text hidden">De formation universitaire, j'étudiais
+                les langues et les civilisations orientales (l'Inde et le Bouddhisme particulièrement). J'ai toujours un grand intérêt personnel pour ces sujets,
+                mais les études universitaires ne me plaisaient pas particulièrement.<br>
                 Comme je travaillais à côté comme serveuse et que j'aimais le dynamisme et le relationnel que
                 cela impliquait, j'ai préféré continuer dans cette voie : Mon dernier poste a été celui de
                 responsable adjointe d'un bar à bières belges à Lausanne, en Suisse.<br>
@@ -162,16 +167,12 @@
             </p>
             <h3 class="change career-title btn-career btn-circle btn-circle-m">Pourquoi le développement front-end ?
             </h3>
-            <p class="change career-text hidden">Même si j'aime mon précédent métier, j'ai toujours
-                su que je ne voulais pas l'exercer toute ma vie. En réfléchissant plus sérieusement à la
-                direction que je voulais prendre, deux facteurs majeurs m'amenèrent sur ma nouvelle voie.<br>
-                Le premier était l'envie d'apprendre quelque chose de nouveau ; des années après mes études,
-                j'avais envie de retrouver cette stimulation. Mais cette fois-ci je voulais pouvoir appliquer
-                concrètement ce que j'apprenais et être capable de créer quelque chose.<br>
-                Le deuxième était mon attrait pour l'image et l'esthétisme ; j'avais adoré créer un logo, un
-                packaging, un site Wordpress et du contenu pour les réseaux sociaux pour un ami quand il s'était
-                lancé dans sa propre entreprise. Idem quand j'ai eu la chance d'être chargée du compte Instagram
-                et de la remise au goût du jour des menus du dernier bar dans lequel j'ai travaillé.<br>
+            <p class="change career-text hidden">Alors que je réfléchissais à ma reconversion, deux facteurs majeurs m'amenèrent sur ma nouvelle voie.<br>
+                Tout d'abord, j'avais envie d'apprendre quelque chose de nouveau, de relever un défi, mais aussi de pouvoir appliquer
+                concrètement mes nouvelles connaissances et d'être capable de créer quelque chose.<br>
+                Puis, après avoir fait le point sur mes expériences passées, j'ai voulu me rapprocher de la création visuelle. En effet, j'avais adoré aider un ami lors de la création de son entreprise (logo, site, réseaux sociaux...).
+                Idem lorsque j'étais chargée du compte Instagram
+                et du visuel des menus du dernier bar dans lequel j'avais travaillé.<br>
                 C'est ainsi que je me suis lancée dans l'apprentissage du développement front-end. Sans regret,
                 car depuis que j'ai commencé à coder, je découvre un métier que j'adore.
             </p>
@@ -179,8 +180,8 @@
             <p class="after career-text">Fin 2020, je suis maman au foyer et j'entame le parcours diplômant de
                 développeur front-end d'OpenClassrooms pendant mon temps libre.<br>
                 Mais à un tiers du parcours, des contraintes de temps et d'argent me poussent à m'adapter et je
-                me lance dans la rechercher d'un poste en alternance pour le reste de la formation.<br>
-                Je mets ma formation en pause et je me lance dans la réalisation de projets personnels : Je
+                me dirige vers l'alternance pour le reste de la formation.<br>
+                Je mets celle-ci en pause et je me lance dans la réalisation de projets personnels : Je
                 commence par reprendre un site Wordpress que j'avais monté pour un ami il y a plusieurs années
                 et le refait de A à Z (je crée l'UI design et code le tout). Et puis je code ce site-ci, pour
                 présenter mon travail auprès des recruteurs et décrocher mon premier poste... Peut-être auprès
@@ -188,7 +189,7 @@
             </p>
         </section>
 
-        <section id="refer">
+        <section class="section" id="refer">
             <h3>"Une de mes meilleures étudiantes"</h3>
             <h4>Recommandation d'Ibrahima Ciss, ingénieur logiciel web & iOS, mentor chez OpenClassrooms</h4>
             <quote>" J'ai eu l'occasion de mentorer Marie sur plusieurs projets. Malgré qu'elle soit Junior
@@ -200,7 +201,7 @@
                     class="btn-refer btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a></p>
         </section>
 
-        <section id="skills">
+        <section class="section" id="skills">
             <h3>Compétences sur le parcours diplômant d'OpenClassrooms</h3>
             <p class="bold">
                 <span class="perso"><i class="fas fa-heart"></i>Personnelles</span>
@@ -226,19 +227,19 @@
             </ul>
         </section>
 
-        <section id="portfolio">
-            <div class="projects-btns">
-                <button class="mon-portfolio btn-portfolio btn-circle btn-circle-xs"><img src="" alt=""></button>
-                <button class="ecoarava btn-portfolio btn-circle btn-circle-xs active"><img src="pictures/ecoarava-logo.png" alt=""></button>
-                <button class="fisheye btn-portfolio btn-circle btn-circle-xs"><img src="pictures/fisheye-logo.png" alt=""></button>
-                <button class="gameon btn-portfolio btn-circle btn-circle-xs"><img src="pictures/gameon-logo.png" alt=""></button>
-                <button class="ohmyfood btn-portfolio btn-circle btn-circle-xs"><img src="pictures/ohmyfood-logo.png" alt=""></button>
-                <button class="reservia btn-portfolio btn-circle btn-circle-xs"><img src="pictures/reservia-logo.png" alt=""></button>
+        <section class="section" id="portfolio">
+            <div class="btns">
+                <button class="mon-portfolio btn-portfolio btn-circle btn-circle-xs">Portfolio</button>
+                <button class="ecoarava btn-portfolio btn-circle btn-circle-xs active">Eco Arava</button>
+                <button class="fisheye btn-portfolio btn-circle btn-circle-xs">Fisheye</button>
+                <button class="gameon btn-portfolio btn-circle btn-circle-xs">GameOn</button>
+                <button class="ohmyfood btn-portfolio btn-circle btn-circle-xs">Oh my food</button>
+                <button class="reservia btn-portfolio btn-circle btn-circle-xs">Reservia</button>
             </div>
-            
+
             <div class="projects">
                 <div class="mon-portfolio project">
-                    <img src="" alt="" class="project-img">
+                    <img src="pictures/portfolio.png" alt="" class="project-img">
                     <div class="project-main">
                         <p class="h5 project-main-type">Projet personnel</p>
                         <div class="project-main-title">
@@ -249,7 +250,8 @@
                             <a href="" target="blank" class="btn-portfolio btn-icon btn-icon-xs"><i
                                     class="fab fa-github"></i></a>
                         </div>
-                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i class="fas fa-ellipsis-v"></i></button>
+                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i
+                                class="fas fa-ellipsis-v"></i></button>
                     </div>
                     <div class="project-details">
                         <ul class="project-details-skills ">
@@ -261,7 +263,7 @@
                             <li>Javascript</li>
                             <li>Sass</li>
                         </ul>
-                        <p></p>
+                        <p>Pour ce projet, j'ai souhaité créer une interface simple avec un contenu concis. J'ai voulu mettre l'accent sur la maintenabilité de mon code mais aussi sur le côté responsive. </p>
                     </div>
                 </div>
 
@@ -279,7 +281,8 @@
                             <a href="https://marie-bu.github.io/EcoArava/" target="blank"
                                 class="btn-portfolio btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a>
                         </div>
-                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i class="fas fa-ellipsis-v"></i></button>
+                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i
+                                class="fas fa-ellipsis-v"></i></button>
                     </div>
                     <div class="project-details">
                         <ul class="project-details-skills ">
@@ -294,9 +297,8 @@
                             <li>Javascript</li>
                             <li>Sass</li>
                         </ul>
-                        <p>Le site visuel des pages, contenu dynamique et une fonction de tri. Le projet remplacera à
-                            terme le site actuel, un ancien site Wordpress que j'avais monté il y a plusieurs années
-                            (création du logo et du contenu compris).</p>
+                        <p>Ce projet est une nouvelle version du site actuel <a href="http://ecoarava.com" target="blank" class="bold">www.ecoarava.com</a>, que j'avais monté sur WordPress il y a des années.<br>
+                        J'ai créé de A à Z le design, le logo, le contenu, le code, les fonctionnalités.<br>A l'avenir, on y ajoutera peut-être le back-end pour le rendre opérationnel.</p>
                     </div>
                 </div>
 
@@ -314,7 +316,8 @@
                             <a href="https://marie-bu.github.io/MarieBurki_6_23022021/" target="blank"
                                 class="btn-portfolio btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a>
                         </div>
-                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i class="fas fa-ellipsis-v"></i></button>
+                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i
+                                class="fas fa-ellipsis-v"></i></button>
                     </div>
                     <div class="project-details">
                         <ul class="project-details-skills ">
@@ -349,7 +352,8 @@
                             <a href="https://marie-bu.github.io/MarieBurki_4_10022021/" target="blank"
                                 class="btn-portfolio btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a>
                         </div>
-                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i class="fas fa-ellipsis-v"></i></button>
+                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i
+                                class="fas fa-ellipsis-v"></i></button>
                     </div>
                     <div class="project-details">
                         <ul class="project-details-skills ">
@@ -377,7 +381,8 @@
                             <a href="https://marie-bu.github.io/MarieBurki_3_12012021/" target="blank"
                                 class="btn-portfolio btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a>
                         </div>
-                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i class="fas fa-ellipsis-v"></i></button>
+                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i
+                                class="fas fa-ellipsis-v"></i></button>
                     </div>
                     <div class="project-details">
                         <ul class="project-details-skills ">
@@ -410,7 +415,8 @@
                             <a href="https://marie-bu.github.io/MarieBurki_2_20122020/" target="blank"
                                 class="btn-portfolio btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a>
                         </div>
-                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i class="fas fa-ellipsis-v"></i></button>
+                        <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i
+                                class="fas fa-ellipsis-v"></i></button>
                     </div>
                     <div class="project-details">
                         <ul class="project-details-skills">
@@ -427,7 +433,7 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section class="section" id="contact">
             <p>Vous pouvez m'écrire à l'adresse mail suivante :<br>
                 <span class="bold">marie.buerki@gmail.com<a href="mailto:marie.buerki@gmail.com" target="_blank"
                         class="btn-contact btn-icon btn-icon-xs" id="send-mail"><i
@@ -437,12 +443,11 @@
             <div class="contact-icons">
                 <a href="http://malt.fr/profile/marieb" target="_blank" class="btn-contact btn-icon btn-icon-contact"
                     id="malt-btn">
-                    <img src="pictures/malt-contact.png" alt="" id="malt-contact">
                     <img src="pictures/malt-dark.png" alt="" id="malt-dark">
                     <img src="pictures/malt-light.png" alt="" id="malt-light"></a>
                 <a href="https://github.com/marie-bu" target="_blank" class="btn-contact btn-icon btn-icon-contact">
                     <i class="fab fa-github"></i></a>
-                <a href="www.linkedin.com/in/marie-bu" target="blank" class="btn-contact btn-icon btn-icon-contact">
+                <a href="http://linkedin.com/in/marie-bu" target="blank" class="btn-contact btn-icon btn-icon-contact">
                     <i class="fab fa-linkedin"></i></a>
             </div>
         </section>

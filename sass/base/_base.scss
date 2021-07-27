@@ -5,21 +5,47 @@
 }
 
 :root {
-    --text-grey: #EEF0F2;
-    --bg-grey: #403F4C;
-    &.light-mode {
-        --text-grey: #403F4C;
-        --bg-grey: #EEF0F2;
+    --text-grey: #403F4C;
+    --middle-grey: #dcdee1;
+    --bg-grey: #EEF0F2;
+    --cv-bg: #FFD2C2;
+    --cv-text: #EB2B00;
+    --career-bg: #C9E6F8;
+    --career-text: #007ECC;
+    --refer-bg: #FED5FF;
+    --refer-text:#E8008F;
+    --portfolio-bg: #FFC2F7;
+    --portfolio-text: #8B0078;
+    --skills-bg: #C7FAF4;
+    --skills-text: #0D9787;
+    --contact-bg: #FFFEBE;
+    --contact-text:#F06800;
+    transition: $short-trans ease-in-out;
+    &.dark-mode {
+        --text-grey: #EEF0F2;
+        --middle-grey: #53525d;
+        --bg-grey: #403F4C;
+        /*--cv-text: #FFD2C2;
+        --cv-bg: #EB2B00;
+        --career-text: #C9E6F8;
+        --career-bg: #007ECC;
+        --refer-text: #FED5FF;
+        --refer-bg:#E8008F;
+        --portfolio-text: #FFC2F7;
+        --portfolio-bg: #8B0078;
+        --skills-text: #C7FAF4;
+        --skills-bg: #0D9787;
+        --contact-text: #FFFEBE;
+        --contact-bg:#F06800;*/
     }
 }
 
 html {
     position: relative;
     //max-width: 3000px;
-    background-color: var(--bg-grey);
-    margin: auto;
-    scroll-behavior: smooth;
+    background-color: var(--middle-grey);
     font-size: 100%;
+    overflow: hidden;
 }
 
 ul {

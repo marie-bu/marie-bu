@@ -1,68 +1,98 @@
 header {
-    position: relative;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 2;
+    isolation: isolate;
     display: flex;
-    z-index: 1;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 4rem;
-    height: 4rem;
-    padding-left: 10rem;
-    padding-right: 1rem;
-    background-color: var(--bg-grey);
-    @include box-shadow;
-    img {
-        position: absolute;
-        top: -1.5rem;
-        left: -1.5rem;
-        height: 8rem;
-        width: 8rem;
-        border-radius: 50%;
-        @include box-shadow;
-    }
-    h1, h2 {
-        white-space: nowrap;
-    }
-    #btn-nav-mobile {
-        display: none;
-    }
-    .nav {
+    height: 100vh;
+    .profile {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        height: 100%;
+        width: 20vw;
+        padding: 2rem 2rem 4rem 2rem;
+        background-color: var(--bg-grey);
+        @include box-shadow;
+        transition: width $middle-trans ease-in 100ms;
+        img {
+            @include box-shadow;
+            margin-bottom: 1rem;
+        }
+        h1, h2, .profile-contact {
+            width: 100%;
+        }
+        .profile-contact {
+            margin-left: -1rem;
+            a:hover, a:focus {
+                box-shadow: none;
+            }
+        }
+        img, h1, h2, .profile-contact {
+            transition: opacity $short-trans ease-in-out 500ms;
+        }
+    }
+    nav {
+        position: absolute;
+        top: 0; left: 0;
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1.5rem;
-        button {
-            visibility: hidden;
+        height: 100%;
+        width: 6rem;
+        padding-bottom: 4rem;
+        background-color: var(--bg-grey);
+        @include box-shadow;
+        opacity: 0;
+        transition: opacity 200ms ease-in-out 0ms ;
+        a {
             position: relative;
-            &:hover span {
-                transform: translateY(0);
+            &:hover span, &:focus span {
+                transform: translateX(0);
+                transition: transform $short-trans ease-in-out;
             }
         }
         span {
             position: absolute;
             z-index: -1;
-            top: 3.25rem;
-            left: -1.5rem;
+            top: 0;
+            left: 4rem;
+            width: max-content;
+            max-width: 5.5rem;
+            word-break: break-all;
             font-size: 1rem;
             padding: 0.6rem;
             background-color: inherit;
             color: inherit;
-            border-radius: 0 0 7px 7px;
-            transform: translateY(-2.5rem);
-            // Attention, décalage quand retour landing page (pas encore de transition sur header)
-            transition: 150ms ease-in;
-        }
-        #span-cv {
-            left: 0rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            opacity: 0;
+            transform: translatex(-5.5rem);
         }
     }
-    .switch-mode {
-        display: flex;
-        gap: 0;
-    }
-    &.active {
-        z-index: auto;
-        nav button {
-            visibility: visible;
+    &.narrowed {
+        .profile {
+            width: 6rem;
+            transition: width $middle-trans ease-in-out 250ms;
+            img, h1, h2, .profile-contact {
+                opacity: 0;
+                transition: opacity $short-trans ease-in-out 50ms;
+            }
+        }
+        nav {
+            z-index: auto;
+            opacity: 1;
+            transition: opacity $short-trans ease-in-out 750ms;
+            span {
+                opacity: 1;
+                transition: opacity 0ms ease-in-out 950ms;
+            }
         }
     }
 }

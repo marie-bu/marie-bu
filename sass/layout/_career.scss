@@ -6,14 +6,7 @@
     
 .career {
     &-title {
-    @include btn-color($color-career);
-    @include box-shadow;
     cursor: pointer;
-        &.active {
-            background-color: $color-career;
-            color: var(--bg-grey);
-            box-shadow: inset 1px 1px 3px $color-shadow;
-        }
     }
     &-text {
         flex: 100%;

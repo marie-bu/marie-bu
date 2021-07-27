@@ -1,108 +1,95 @@
-.projects {
-    width: 80%;
-    &-btns {
-        display: flex;
-        flex-wrap: wrap;
+#portfolio {
+    flex-direction: row;
+    .btns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
-        max-height: 65vh;
-        width: 20%;
-        padding-right: 1rem;
-        border-right: 0.1rem $color-portfolio solid;
-        .btn-circle-xs {
-            padding: 0.3rem;
-            &.active {
-                background-color: $color-portfolio;
-            }
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
     }
-}
-
-.project {
-    position: relative;
-    display: none;
-    justify-content: space-between;
-    width: 100%;
-    border-radius: 0.5rem;
-    @include box-shadow;
-    overflow: hidden;
-    &-img {
+    .project {
         position: relative;
-        z-index: 1;
-        min-width: 60%;
-        max-width: 60%;
-        border-radius: 0.5rem 0 0 0.5rem;
-        transform: translateX(0);
-        transition: 250ms ease-in-out;
-        &.hidden {
-            transform: translateX(-100%);
-        }
-    }
-    &-main {
-        position: relative;
-        display: flex;
-        flex-direction: column;
+        display: none;
         justify-content: space-between;
         width: 100%;
-        padding: 2rem 2rem 2rem 4rem;
-        border-left: 0.3rem rgba($color: $color-portfolio, $alpha: 0.2) solid;
+        border-radius: 0.5rem;
+        background-color: var(--bg-grey);
+        @include box-shadow;
         overflow: hidden;
-        &-type {
-            margin-right: -2rem;
-            margin-left: auto;
-            padding: 0.5rem 1rem;
-            background-color: rgba($color: $color-portfolio, $alpha: 0.2);
-            color: $color-portfolio;
-            border-radius: 5px 0 0 5px;
-            @include box-shadow;
-        }
-        .h3 {
-            padding-bottom: 1rem;
-        }
-        &-links {
-            display: flex;
-            justify-content: flex-end;
-            gap: 1rem;
-        }
-    }
-    &-details {
-        position: absolute;
-        top:0; bottom:0; left:0;
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 2rem;
-        overflow: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-        &-skills {
+        &-img {
             position: relative;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.2rem 1.5rem;
-            padding: 1rem 1rem 1rem 4rem;
+            z-index: 1;
+            min-width: 60%;
+            max-width: 60%;
+            margin: 0.5rem;
             border-radius: 0.5rem;
-            background-color: rgba($color: $color-portfolio, $alpha: 0.2);
-            color: $color-portfolio;
-            .icon-tools {
-                position: absolute;
-                top: 50%; left: 1rem;
-                margin-top: -1rem;
-                line-height: 2rem;
-                text-align: center;
-                background-color: var(--bg-grey);
+            transform: translateX(0);
+            transition: 250ms ease-in-out;
+            &.hidden {
+                transform: translateX(-105%);
             }
         }
-    }
-    &.active {
-        display: flex;
+        &-main {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            padding: 2rem 2rem 2rem 4rem;
+            border-left: 0.3rem var(--portfolio-bg) solid;
+            overflow: hidden;
+            &-type {
+                margin-right: -2rem;
+                margin-left: auto;
+                padding: 0.5rem 1rem;
+                background-color: var(--portfolio-bg);
+                color: var(--portfolio-text);
+                border-radius: 5px 0 0 5px;
+                @include box-shadow;
+            }
+            .h3 {
+                padding-bottom: 1rem;
+            }
+            &-links {
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+        }
+        &-details {
+            position: absolute;
+            top:0; bottom:0; left:0;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 2rem;
+            overflow: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            &-skills {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.2rem 1.5rem;
+                padding: 1rem 1rem 1rem 4rem;
+                border-radius: 0.5rem;
+                background-color: var(--portfolio-bg);
+                color: var(--portfolio-text);
+                .icon-tools {
+                    position: absolute;
+                    top: 50%; left: 1rem;
+                    margin-top: -1rem;
+                    line-height: 2rem;
+                    text-align: center;
+                    background-color: var(--portfolio-text);
+                    color: var(--portfolio-bg);
+                }
+            }
+        }
+        &.active {
+            display: flex;
+        }
     }
 }
