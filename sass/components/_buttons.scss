@@ -1,21 +1,21 @@
 .btn {
     &-cv {
-        @include btn-color(var(--cv-bg), var(--cv-text));
+        @include btn-color($cv-dark, $cv-light);
     }
     &-career {
-        @include btn-color(var(--career-bg), var(--career-text));
+        @include btn-color($career-dark, $career-light);
     }
     &-refer {
-        @include btn-color(var(--refer-bg), var(--refer-text));
+        @include btn-color($refer-dark , $refer-light);
     }
     &-skills {
-        @include btn-color(var(--skills-bg), var(--skills-text));
+        @include btn-color($skills-dark, $skills-light);
     }
     &-portfolio {
-        @include btn-color(var(--portfolio-bg), var(--portfolio-text));
+        @include btn-color($portfolio-dark, $portfolio-light);
     }
     &-contact {
-        @include btn-color(var(--contact-bg), var(--contact-text));
+        @include btn-color($contact-dark, $contact-light);
     }
     &-home {
         @include btn;
@@ -28,7 +28,7 @@
     @include btn;
     @include box-shadow;
     &-l {
-        @include circle(13rem, 1.3rem);
+        @include circle(13rem, 1.2rem);
     }
     &-m {
         @include circle(9rem, 1rem);
@@ -49,36 +49,27 @@
         img {
             @include circle(3rem, 1rem);
         }
-        #malt-light {
+        #malt-dark {
             display: none;
         }
         &:hover, &:focus {
-            #malt-dark {
+            #malt-light {
                 display: none;
             }
-            #malt-light {
+            #malt-dark {
                 display: inline-block;
             }
         }
     }
     &-s {
         @include circle(2.5rem, 1.25rem);
+        filter: none;
+        animation: none;
     }
     &-xs {
         @include circle(2rem, 1rem);
     }
     &#send-mail {
         margin-left: 1.5rem;
-        i {
-            margin-left: -0.15rem
-        }
-    }
-    &-more {
-        position: absolute;
-        top: 50%; left: -1rem;
-        padding-right: 0.3rem;
-        margin-top: -1rem;
-        transition: inherit;
-        box-shadow: none;
     }
 }

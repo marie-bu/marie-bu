@@ -17,10 +17,11 @@
         &-img {
             position: relative;
             z-index: 1;
-            min-width: 60%;
-            max-width: 60%;
+            min-width: 63%;
+            max-width: 63%;
             margin: 0.5rem;
             border-radius: 0.5rem;
+            box-shadow: 0 0 1px $color-shadow;
             transform: translateX(0);
             transition: 250ms ease-in-out;
             &.hidden {
@@ -33,15 +34,14 @@
             flex-direction: column;
             justify-content: space-between;
             width: 100%;
-            padding: 2rem 2rem 2rem 4rem;
-            border-left: 0.3rem var(--portfolio-bg) solid;
+            padding: 2rem;
             overflow: hidden;
             &-type {
                 margin-right: -2rem;
                 margin-left: auto;
                 padding: 0.5rem 1rem;
-                background-color: var(--portfolio-bg);
-                color: var(--portfolio-text);
+                background-color: $portfolio-light;
+                color: $portfolio-dark;
                 border-radius: 5px 0 0 5px;
                 @include box-shadow;
             }
@@ -50,14 +50,13 @@
             }
             &-links {
                 display: flex;
-                justify-content: flex-end;
                 gap: 1rem;
             }
         }
         &-details {
             position: absolute;
             top:0; bottom:0; left:0;
-            width: 60%;
+            width: 63%;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
@@ -75,16 +74,17 @@
                 gap: 0.2rem 1.5rem;
                 padding: 1rem 1rem 1rem 4rem;
                 border-radius: 0.5rem;
-                background-color: var(--portfolio-bg);
-                color: var(--portfolio-text);
+                background-color: $portfolio-light;
+                color: $portfolio-dark;
+                border: 1px $portfolio-dark solid;
                 .icon-tools {
                     position: absolute;
                     top: 50%; left: 1rem;
                     margin-top: -1rem;
                     line-height: 2rem;
                     text-align: center;
-                    background-color: var(--portfolio-text);
-                    color: var(--portfolio-bg);
+                    background-color: $portfolio-dark;
+                    color: $portfolio-light;
                 }
             }
         }

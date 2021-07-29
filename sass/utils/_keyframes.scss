@@ -1,0 +1,40 @@
+@keyframes jump {
+    0% {
+        transform: translateY(0%) scaleX(102%) scaleY(98%);
+    }
+    2% {
+        transform: translateY(0%) scaleX(102%) scaleY(98%);
+    }
+    50% {
+        transform: translateY(-8%) scaleX(99%) scaleY(101%);
+    }
+    98% {
+        transform: translateY(0%) scaleX(102%) scaleY(98%);
+    }
+    100% {
+        transform: translateY(0%) scaleX(102%) scaleY(98%);
+    }
+}
+
+@keyframes ball-shadow {
+    0% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+    2% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+    50% {
+        transform:scale(110%);
+        opacity: 0.5;
+    }
+    98% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(100%);
+        opacity: 1;
+    }   
+}

@@ -8,10 +8,13 @@
     height: min-content;
     width: min-content;
     margin: auto;
-    transition: transform 500ms ease-in-out 100ms;
+    transition: transform 500ms ease-in-out 250ms;
     transform: translateX(0%) scale(100%);
     &.narrowed {
-        transition: transform 500ms ease-in-out 250ms;
+        transition: transform 500ms ease-in-out 200ms;
         transform: translateX(-100%) scale(0%);
+        a {
+            filter: none;
+        }
     }
 }

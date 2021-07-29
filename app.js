@@ -10,7 +10,7 @@ const header = document.querySelector("header");
 const navBtns = document.querySelectorAll("nav .btn-icon-s");
 const returnHomeBtn = document.querySelector("nav .btn-home");
 const home = document.querySelector("#home");
-const homeBtns = home.querySelectorAll(".btn-circle");
+const homeBtns = home.querySelectorAll(".ball-l");
 const main = document.querySelector("main");
 const sections = document.querySelectorAll(".section");
 
@@ -122,7 +122,7 @@ projectsBtns.forEach((btn) => {
 
 btnsMore.forEach((btn) => {
     btn.addEventListener("click", () => {
-        let image = btn.parentNode.previousElementSibling;
+        let image = btn.parentNode.parentNode.previousElementSibling;
         image.classList.toggle("hidden");
     });
 });

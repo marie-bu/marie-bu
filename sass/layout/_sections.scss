@@ -21,11 +21,12 @@ main {
         margin-left: 6rem;
         scroll-snap-align: start;
         opacity: 0;
+        transition: opacity $short-trans ease-in;
     }
     &.active {
         .section {
             opacity: 1;
-            transition: opacity $middle-trans ease-in 750ms;
+            transition: opacity $middle-trans ease-in 850ms;
         }
     }
 }

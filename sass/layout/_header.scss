@@ -18,10 +18,11 @@ header {
         padding: 2rem 2rem 4rem 2rem;
         background-color: var(--bg-grey);
         @include box-shadow;
-        transition: width $middle-trans ease-in 100ms;
+        transition: width $middle-trans ease-in 250ms;
         img {
             @include box-shadow;
             margin-bottom: 1rem;
+            filter: grayscale(100%);
         }
         h1, h2, .profile-contact {
             width: 100%;
@@ -33,7 +34,10 @@ header {
             }
         }
         img, h1, h2, .profile-contact {
-            transition: opacity $short-trans ease-in-out 500ms;
+            transition: opacity $short-trans ease-in-out 650ms;
+        }
+        &:hover img, &:focus img {
+            filter: none;
         }
     }
     nav {
@@ -51,7 +55,7 @@ header {
         background-color: var(--bg-grey);
         @include box-shadow;
         opacity: 0;
-        transition: opacity 200ms ease-in-out 0ms ;
+        transition: opacity $short-trans ease-in-out;
         a {
             position: relative;
             &:hover span, &:focus span {
@@ -65,7 +69,7 @@ header {
             top: 0;
             left: 4rem;
             width: max-content;
-            max-width: 5.5rem;
+            max-width: 6rem;
             word-break: break-all;
             font-size: 1rem;
             padding: 0.6rem;
@@ -73,25 +77,26 @@ header {
             color: inherit;
             border-radius: 0 0.5rem 0.5rem 0;
             opacity: 0;
-            transform: translatex(-5.5rem);
+            transform: translatex(-6rem);
         }
     }
     &.narrowed {
         .profile {
             width: 6rem;
-            transition: width $middle-trans ease-in-out 250ms;
+            transition: width $middle-trans ease-in-out 200ms;
             img, h1, h2, .profile-contact {
                 opacity: 0;
-                transition: opacity $short-trans ease-in-out 50ms;
+                transition: opacity $short-trans ease-in-out 100ms;
+                filter: none;
             }
         }
         nav {
             z-index: auto;
             opacity: 1;
-            transition: opacity $short-trans ease-in-out 750ms;
+            transition: opacity $short-trans ease-in-out 800ms;
             span {
                 opacity: 1;
-                transition: opacity 0ms ease-in-out 950ms;
+                transition: opacity 0ms ease-in-out 1000ms;
             }
         }
     }

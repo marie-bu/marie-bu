@@ -30,6 +30,23 @@
     }
 }
 
+@mixin ball-color($center, $outer, $text) {
+    position: relative;
+    background: radial-gradient(circle at 4rem 4rem, $center, $outer);
+    color: $text;
+    box-shadow: inset 1px 1px 15px rgba($color: darken($outer, 15%), $alpha: 0.2),
+                inset -2px -1px 40px rgba($color: darken($outer, 5%), $alpha: 0.3),
+                0 0 1px rgba($color-shadow, 0.5);
+    filter: grayscale(100%);
+    animation: jump 1000ms ease infinite;
+    &:hover, &:focus {
+        filter: none;
+    }
+    &.active {
+        box-shadow: inset 1px 1px 3px $color-shadow;
+    }
+}
+
 @mixin box-shadow {
     box-shadow: 1px 1px 3px $color-shadow;
 }
