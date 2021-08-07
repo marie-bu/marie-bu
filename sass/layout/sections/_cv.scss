@@ -3,11 +3,18 @@
     display: flex;
     @include box-shadow;
     isolation: isolate;
+    @include small-screens {
+        flex-direction: column;
+    }
     &-top {
         height: 27rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        @include small-screens {
+            min-height: 27rem;
+            height: max-content;
+        }
     }
     &-left {
         display: flex;
@@ -20,12 +27,18 @@
         img {
             width: 100%;
             border-radius: 50%;
+            @include small-screens {
+                max-width: 400px;
+            }
         }
         p {
         display: flex;
         gap: 1rem;
         align-items: center;
         white-space: nowrap;
+        }
+        @include small-screens {
+            width: 100%;
         }
     }
     &-right {
@@ -46,4 +59,8 @@
     position: absolute;
     top: -3rem;
     right: -3rem;
+    @include small-screens {
+        top: -1rem;
+        right: -1rem;
+    }
 }

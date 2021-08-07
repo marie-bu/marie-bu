@@ -12,8 +12,7 @@
 </head>
 
 <body>
-    <!--<button class="btn-icon btn-icon-nav" id="btn-nav-mobile"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>-->
-
+    
     <header>
         <div class="profile">
             <img src="pictures/profile.png" alt="" class="btn-circle-l">
@@ -27,6 +26,7 @@
                 <a href="http://linkedin.com/in/marie-bu" target="blank" class="btn-home btn-icon-xs">
                     <i class="fab fa-linkedin"></i></a>
             </div>
+            <button class="btn-nav hidden" id="btn-nav-mobile"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
         </div>
         <nav>
             <a href="#cv" class="btn-cv cv btn-icon btn-icon-s"><i class="fas fa-user-alt"></i><span id="span-cv">CV</span></a>
@@ -110,13 +110,13 @@
                         <h4>Expérience dans le développement</h4>
                         <p>
                             <span class="bold">Design et intégration de mon portfolio</span><br>
-                            <span class="light">Projet personnel - juin 2021</span><br>
-                            Création de l'UI design et intégration de mon portfolio ; accent porté sur l'intégration
+                            <span class="light">Projet personnel - juin 2021 à juillet 2021</span><br>
+                            Création de l'UI design et intégration de mon portfolio ; accent porté sur la maintenabilité du code et l'intégration
                             responsive.
                         </p>
                         <p>
                             <span class="bold">Design et intégration d'un site web</span><br>
-                            <span class="light">Eco Arava, Israel - mai 2021 à juin 2021</span><br>
+                            <span class="light">Eco Arava - mai 2021 à juin 2021</span><br>
                             Création de l'UI design et implémentation du code ; visuel des pages, contenu dynamique
                             et une fonction de tri. Le projet remplacera à terme le site actuel, un ancien site
                             Wordpress que j'avais monté il y a plusieurs années (création du logo et du contenu
@@ -150,7 +150,7 @@
                         </p>
                         <p>
                             <span class="bold">Etudes bouddhiques</span><br>
-                            <span class="light">Université de Kathmandou, Népal - juin 2010 à mai 2012</span>
+                            <span class="light">Université de Katmandou, Népal - juin 2010 à mai 2012</span>
                         </p>
                         <p>
                             <span class="bold">Bachelor en Langues et Civilisations Indiennes et
@@ -164,7 +164,7 @@
                     </div>
                 </div>
                 <a href="CV - Marie Burki.pdf" download class="btn-cv btn-circle btn-circle-s" target="blank"
-                    id="download-cv">Télécharger PDF</a>
+                    id="download-cv">Télécharger le CV</a>
             </div>
         </section>
 
@@ -253,7 +253,6 @@
 
             <div class="projects">
                 <div class="mon-portfolio project">
-                    <img src="pictures/portfolio.png" alt="" class="project-img">
                     <div class="project-main">
                         <p class="h5 project-main-type">Projet personnel</p>
                         <div class="project-main-title">
@@ -263,25 +262,27 @@
                         <div class="project-main-links">
                             <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i class="fas fa-ellipsis-v"></i></button>
                             <a href="" target="blank" class="btn-portfolio btn-icon btn-icon-xs"><i
-                                    class="fab fa-github"></i></a>
+                                class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <div class="project-details">
-                        <ul class="project-details-skills ">
-                            <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
-                            <li>UI design</li>
-                            <li>Responsive design</li>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Javascript</li>
-                            <li>Sass</li>
-                        </ul>
-                        <p>Pour ce projet, j'ai souhaité créer une interface simple avec un contenu concis. J'ai voulu mettre l'accent sur la maintenabilité de mon code mais aussi sur le côté responsive. </p>
+                    <div class="project-switch">
+                        <img src="pictures/portfolio.png" alt="" class="project-img">
+                        <div class="project-details">
+                            <ul class="project-details-skills ">
+                                <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
+                                <li>UI design</li>
+                                <li>Responsive design</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>Sass</li>
+                            </ul>
+                            <p>Pour ce projet, j'ai souhaité créer une interface simple avec un contenu concis. J'ai voulu mettre l'accent sur la maintenabilité de mon code mais aussi sur le côté responsive. </p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="ecoarava project active">
-                    <img src="pictures/ecoarava.png" alt="" class="project-img">
                     <div class="project-main">
                         <p class="h5 project-main-type">Projet personnel</p>
                         <div class="project-main-title">
@@ -296,26 +297,29 @@
                             class="btn-portfolio btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <div class="project-details">
-                        <ul class="project-details-skills ">
-                            <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
-                            <li>UI design</li>
-                            <li>Responsive design</li>
-                            <li>Création d'un logo</li>
-                            <li>Création de contenu</li>
-                            <li>Accessibilité</li>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Javascript</li>
-                            <li>Sass</li>
-                        </ul>
-                        <p>Ce projet est une nouvelle version du site actuel <a href="http://ecoarava.com" target="blank" class="bold">www.ecoarava.com</a>, que j'avais monté sur WordPress il y a des années.<br>
-                            J'ai tout créé et codé (design, logo, contenu, fonctionnalités...)<br>A l'avenir, on y ajoutera peut-être le back-end pour le rendre opérationnel.</p>
+                    <div class="project-switch">
+                        <img src="pictures/ecoarava.png" alt="" class="project-img">
+                        <div class="project-details">
+                            <ul class="project-details-skills ">
+                                <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
+                                <li>UI design</li>
+                                <li>Responsive design</li>
+                                <li>Création d'un logo</li>
+                                <li>Création de contenu</li>
+                                <li>Accessibilité</li>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>Sass</li>
+                            </ul>
+                            <p>Ce projet est une nouvelle version du site actuel <a href="http://ecoarava.com" target="blank" class="bold">www.ecoarava.com</a>, que j'avais monté sur WordPress il y a des années.<br>
+                                J'ai tout créé et codé (design, logo, contenu, fonctionnalités...)<br>A l'avenir, on y ajoutera peut-être le back-end pour le rendre opérationnel.
+                            </p>
                         </div>
                     </div>
+                </div>
                     
                 <div class="fisheye project">
-                    <img src="pictures/fisheye.png" alt="" class="project-img">
                     <div class="project-main">
                         <p class="h5 project-main-type">Projet OpenClassrooms</p>
                         <div class="project-main-title">
@@ -324,34 +328,36 @@
                         </div>
                         <div class="project-main-links">
                             <button class="btn-portfolio btn-icon btn-icon-xs btn-icon-more"><i
-                                    class="fas fa-ellipsis-v"></i></button>
+                                class="fas fa-ellipsis-v"></i></button>
                             <a href="https://github.com/marie-bu/MarieBurki_6_23022021" target="blank"
                                 class="btn-portfolio btn-icon btn-icon-xs"><i class="fab fa-github"></i></a>
                             <a href="https://marie-bu.github.io/MarieBurki_6_23022021/" target="blank"
                                 class="btn-portfolio btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <div class="project-details">
-                        <ul class="project-details-skills ">
-                            <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
-                            <li>Accessibilité</li>
-                            <li>Javascript</li>
-                            <li>CSS3</li>
-                            <li>Sass</li>
-                            <li>HTML5</li>
-                        </ul>
-                        <p>Ce projet est axé sur l'approfondissement des connaissances en Javascript, particulièrement
-                            la gestion des évènements d'un site (modales, contenu dynamique, incrémentation de likes,
-                            fonctions de filtres et de tri), le développement d'une application web modulaire avec les
-                            design patterns et l'écriture d'un code maintenable.<br>
-                            Le deuxième objectif est de s'assurer de l'accessibilité du site (screen readers et
-                            accessibilité au clavier).
-                        </p>
+                    <div class="project-switch">
+                        <img src="pictures/fisheye.png" alt="" class="project-img">
+                        <div class="project-details">
+                            <ul class="project-details-skills ">
+                                <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
+                                <li>Accessibilité</li>
+                                <li>Javascript</li>
+                                <li>CSS3</li>
+                                <li>Sass</li>
+                                <li>HTML5</li>
+                            </ul>
+                            <p>Ce projet est axé sur l'approfondissement des connaissances en Javascript, particulièrement
+                                la gestion des évènements d'un site (modales, contenu dynamique, incrémentation de likes,
+                                fonctions de filtres et de tri), le développement d'une application web modulaire avec les
+                                design patterns et l'écriture d'un code maintenable.<br>
+                                Le deuxième objectif est de s'assurer de l'accessibilité du site (screen readers et
+                                accessibilité au clavier).
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="gameon project">
-                    <img src="pictures/gameon.png" alt="" class="project-img">
                     <div class="project-main">
                         <p class="h5 project-main-type">Projet OpenClassrooms</p>
                         <div class="project-main-title">
@@ -367,20 +373,22 @@
                                 class="btn-portfolio btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <div class="project-details">
-                        <ul class="project-details-skills ">
-                            <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
-                            <li>Javascript</li>
-                        </ul>
-                        <p>Ce projet est la première approche de Javascript dans le parcours Front-end d'OpenClassrooms.
-                            L'objectif est d'apprivoiser le language en implémentant un formulaire d'inscription :
-                            ouverture et fermeture d'une modale, vérification de certains critères pour chaque input,
-                            apparition de messages d'erreur et de confirmation.</p>
+                    <div class="project-switch">
+                        <img src="pictures/gameon.png" alt="" class="project-img">
+                        <div class="project-details">
+                            <ul class="project-details-skills ">
+                                <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
+                                <li>Javascript</li>
+                            </ul>
+                            <p>Ce projet est la première approche de Javascript dans le parcours Front-end d'OpenClassrooms.
+                                L'objectif est d'apprivoiser le language en implémentant un formulaire d'inscription :
+                                ouverture et fermeture d'une modale, vérification de certains critères pour chaque input,
+                                apparition de messages d'erreur et de confirmation.</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="ohmyfood project">
-                    <img src="pictures/ohmyfood.png" alt="" class="project-img">
                     <div class="project-main">
                         <p class="h5 project-main-type">Projet OpenClassrooms</p>
                         <div class="project-main-title">
@@ -396,25 +404,27 @@
                                 class="btn-portfolio btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <div class="project-details">
-                        <ul class="project-details-skills ">
-                            <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
-                            <li>CSS3</li>
-                            <li>Sass</li>
-                            <li>HTML5</li>
-                            <li>Responsive design</li>
-                        </ul>
-                        <p>Ce projet cible la mise en place d'effets et animations CSS graphiques avancés ainsi que
-                            l'apprentissage de Sass, pour un code CSS facilité et maintenable.<br>
-                            Par ailleurs, certaines animations sont à imaginer et à créer entièrement par l'étudiant et
-                            seule la maquette de la version mobile est fournie; c'est à l'étudiant de créer les versions
-                            tablette et desktop.
-                        </p>
+                    <div class="project-switch">
+                        <img src="pictures/ohmyfood.png" alt="" class="project-img">
+                        <div class="project-details">
+                            <ul class="project-details-skills ">
+                                <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
+                                <li>CSS3</li>
+                                <li>Sass</li>
+                                <li>HTML5</li>
+                                <li>Responsive design</li>
+                            </ul>
+                            <p>Ce projet cible la mise en place d'effets et animations CSS graphiques avancés ainsi que
+                                l'apprentissage de Sass, pour un code CSS facilité et maintenable.<br>
+                                Par ailleurs, certaines animations sont à imaginer et à créer entièrement par l'étudiant et
+                                seule la maquette de la version mobile est fournie; c'est à l'étudiant de créer les versions
+                                tablette et desktop.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="reservia project">
-                    <img src="pictures/reservia.png" alt="" class="project-img">
                     <div class="project-main">
                         <p class="h5 project-main-type">Projet OpenClassrooms</p>
                         <div class="project-main-title">
@@ -430,16 +440,19 @@
                                 class="btn-portfolio btn-icon btn-icon-xs"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <div class="project-details">
-                        <ul class="project-details-skills">
-                            <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
-                            <li>CSS3</li>
-                            <li>HTML5</li>
-                            <li>Responsive design</li>
-                        </ul>
-                        <p>L'objectif sur ce projet est d'intégrer une maquette responsive en HTML et en CSS, tout en se
-                            familiarisant avec la gestion de versions sur Git et GitHub.<br> La maquette pour la version
-                            tablette n'étant pas définie, c'est à l'étudiant de concevoir le design pour ce format.</p>
+                    <div class="project-switch">
+                        <img src="pictures/reservia.png" alt="" class="project-img">
+                        <div class="project-details">
+                            <ul class="project-details-skills">
+                                <li class="btn-icon-xs icon-tools"><i class="fas fa-tools"></i></li>
+                                <li>CSS3</li>
+                                <li>HTML5</li>
+                                <li>Responsive design</li>
+                            </ul>
+                            <p>L'objectif sur ce projet est d'intégrer une maquette responsive en HTML et en CSS, tout en se
+                                familiarisant avec la gestion de versions sur Git et GitHub.<br> La maquette pour la version
+                                tablette n'étant pas définie, c'est à l'étudiant de concevoir le design pour ce format.</p>
+                        </div>
                     </div>
                 </div>
             </div>

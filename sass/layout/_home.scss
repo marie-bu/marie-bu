@@ -1,9 +1,10 @@
 #home {
     position: absolute;
-    top: 0; bottom: 0; left: 20vw; right: 0;
-    z-index: 1;
+    top: 0; bottom: 0; left: 17rem; right: 0;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content;
     gap: 3.5rem;
     height: min-content;
     width: min-content;
@@ -15,6 +16,33 @@
         transform: translateX(-100%) scale(0%);
         a {
             filter: none;
+        }
+        @include small-screens {
+            transition-delay: 50ms;
+        }
+    }
+    @include small-screens {
+        top: 5rem;
+        left: 0;
+        height: calc(100vh - 5rem);
+        margin: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        transition-delay: 50ms;
+        .ball-wrapper {
+            height: 100%;
+        }
+        a {
+            height: 100%;
+            width: 100vw;
+            border-radius: 0;
+            box-shadow: none;
+            animation: none;
+            filter: none;
+        }
+        .ball-shadow {
+            display: none;
         }
     }
 }

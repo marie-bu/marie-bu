@@ -21,10 +21,28 @@
         @include btn;
         @include btn-color(var(--bg-grey), var(--text-grey));
     }
+    &-nav {
+        border: none;
+        background: none;
+        color: var(--text-grey);
+        .fa-times {
+            display: none;
+        }
+        &.btn-close {
+            .fa-times {
+                display: inline-block;
+            }
+            .fa-bars {
+                display: none;
+            }
+        }
+        &.hidden {
+            display: none;
+        }
+    }
 }
 
 .btn-circle {
-    position: relative;
     @include btn;
     @include box-shadow;
     &-l {
@@ -45,9 +63,9 @@
     @include btn;
     @include box-shadow;
     &-contact {
-        @include circle(6rem, 3rem);
+        @include circle(5rem, 2.5rem);
         img {
-            @include circle(3rem, 1rem);
+            @include circle(2.5rem, 1rem);
         }
         #malt-dark {
             display: none;

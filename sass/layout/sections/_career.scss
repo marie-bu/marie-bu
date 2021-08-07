@@ -2,11 +2,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
+    @include small-screens {
+        padding-top: 0;
+        gap: 1rem 2rem;
+    }
 }
     
 .career {
     &-title {
-    cursor: pointer;
+        cursor: pointer;
     }
     &-text {
         flex: 100%;

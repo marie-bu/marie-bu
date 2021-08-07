@@ -14,6 +14,8 @@ const homeBtns = home.querySelectorAll(".ball-l");
 const main = document.querySelector("main");
 const sections = document.querySelectorAll(".section");
 
+const burgerMenuBtn = document.querySelector(".btn-nav");
+
 const careerTitles = document.querySelectorAll(".career-title");
 const careerTexts = document.querySelectorAll(".career-text");
 
@@ -45,8 +47,13 @@ homeBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
         home.classList.add("narrowed");
         btn.classList.add("active");
-        header.classList.add("narrowed");
         main.classList.add("active");
+        if (screen.width > 985) {
+            header.classList.add("narrowed");
+        }
+        if (screen.width <= 985) {
+            burgerMenuBtn.classList.remove("btn-close", "hidden");
+        }
     });
 });
 
@@ -77,7 +84,6 @@ const observer = new IntersectionObserver(function(entries) {
             navBtns.forEach(btn=> {
                 if (btn.classList[1] === entry.target.id) {
                     btn.classList.add("active");
-                    console.log(btn);
                 }
             });
         }
@@ -86,6 +92,13 @@ const observer = new IntersectionObserver(function(entries) {
 
 
 sections.forEach(section => observer.observe(section));
+
+// Navigation small screens 
+
+burgerMenuBtn.addEventListener("click", ()=> {
+    burgerMenuBtn.classList.toggle("btn-close");
+    home.classList.toggle("narrowed");
+})
 
 // Career 
 
@@ -115,6 +128,7 @@ projectsBtns.forEach((btn) => {
             } else {
                 project.classList.remove("active");
                 project.querySelector(".project-img").classList.remove("hidden");
+                project.querySelector(".btn-icon-more").classList.remove("active");
             }
         });
     });
@@ -122,7 +136,9 @@ projectsBtns.forEach((btn) => {
 
 btnsMore.forEach((btn) => {
     btn.addEventListener("click", () => {
-        let image = btn.parentNode.parentNode.previousElementSibling;
-        image.classList.toggle("hidden");
+        let projectSwitch = btn.parentNode.parentNode.nextElementSibling;
+        let details = projectSwitch.querySelector(".project-details");
+        details.classList.toggle("active");
+        btn.classList.toggle("active");
     });
 });

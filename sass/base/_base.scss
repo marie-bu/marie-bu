@@ -16,10 +16,35 @@
 }
 
 html {
-    position: relative;
-    //max-width: 3000px;
     background-color: var(--middle-grey);
-    font-size: 100%;
+    overflow: hidden;
+    @media screen and (max-width: 400px) {
+        font-size: 12px;
+    }
+    @media screen and (min-width: 401px) and (max-width: 1000px) {
+        font-size: 13px;
+    }
+    @media screen and (min-width: 1001px) and (max-width: 1200px) {
+        font-size: 14px;
+    }
+    @media screen and (min-width: 1201px) and (max-width: 1400px) {
+        font-size: 16px;
+    }
+    @media screen and (min-width: 1401px) and (max-width: 1600px) {
+        font-size: 19px;
+    }
+    @media screen and (min-width: 1601px) and (max-width: 1800px) {
+        font-size: 22px;
+    }
+    @media screen and (min-width: 1801px) {
+        font-size: 25px;
+    }
+}
+
+body {
+    position: relative;
+    max-width: 2000px;
+    margin: auto;
     overflow: hidden;
 }
 

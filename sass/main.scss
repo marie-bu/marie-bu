@@ -10,10 +10,10 @@
 @import "./components/switch-mode";
 
 @import "./layout/header";
-@import "./layout/sections";
+@import "./layout/main";
 @import "./layout/home";
-@import "./layout/cv";
-@import "./layout/career";
-@import "./layout/skills";
-@import "./layout/portfolio";
-@import "./layout/contact";
+@import "./layout/sections/cv";
+@import "./layout/sections/career";
+@import "./layout/sections/skills";
+@import "./layout/sections/portfolio";
+@import "./layout/sections/contact";

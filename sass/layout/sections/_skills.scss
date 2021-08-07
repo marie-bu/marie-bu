@@ -15,5 +15,10 @@
         max-height: 8rem;
         width: 80%;
         margin-top: 2rem;
+        @include small-screens {
+            width: 100%;
+            max-height: none;
+            align-content: center;
+        }
     }
 }

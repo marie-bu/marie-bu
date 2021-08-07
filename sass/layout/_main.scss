@@ -7,7 +7,7 @@ main {
     &::-webkit-scrollbar {
         display: none;
     }
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
     .section {
         display: flex;
@@ -22,11 +22,18 @@ main {
         scroll-snap-align: start;
         opacity: 0;
         transition: opacity $short-trans ease-in;
+        @media screen and (max-width: 985px) {
+            padding: 8rem 2rem 3rem 2rem;
+            margin-left: 0;
+        }
     }
     &.active {
         .section {
             opacity: 1;
             transition: opacity $middle-trans ease-in 850ms;
+            @include small-screens {
+                transition-delay: 100ms;
+            }
         }
     }
 }

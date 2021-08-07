@@ -50,3 +50,9 @@
 @mixin box-shadow {
     box-shadow: 1px 1px 3px $color-shadow;
 }
+
+@mixin small-screens {
+    @media screen and (max-width: 985px) {
+        @content
+    }
+}
