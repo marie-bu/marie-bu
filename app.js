@@ -1,4 +1,28 @@
-// DOM elements
+homeBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        home.classList.add("narrowed");
+        btn.classList.add("active");
+        main.classList.add("active");
+        if (screen.width > 985) {
+            header.classList.add("narrowed");
+        }
+        if (screen.width <= 985) {
+            burgerMenuBtn.classList.remove("btn-close", "hidden");
+        }
+    });
+});homeBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        home.classList.add("narrowed");
+        btn.classList.add("active");
+        main.classList.add("active");
+        if (screen.width > 985) {
+            header.classList.add("narrowed");
+        }
+        if (screen.width <= 985) {
+            burgerMenuBtn.classList.remove("btn-close", "hidden");
+        }
+    });
+});// DOM elements
 
 const buttons = document.querySelectorAll("button");
 const links = document.querySelectorAll("a");
@@ -29,7 +53,19 @@ const projects = document.querySelectorAll(".project");
 buttons.forEach(btn => btn.addEventListener("click", () => {
     btn.blur();
 }));
-
+homeBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        home.classList.add("narrowed");
+        btn.classList.add("active");
+        main.classList.add("active");
+        /*if (screen.width > 985) {
+            header.classList.add("narrowed");
+        }
+        if (screen.width <= 985) {
+            burgerMenuBtn.classList.remove("btn-close", "hidden");
+        }*/
+    });
+});
 links.forEach(link => link.addEventListener("click", () => {
     link.blur();
 }));
