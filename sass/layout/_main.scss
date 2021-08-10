@@ -9,6 +9,9 @@ main {
     }
     scroll-snap-type: y proximity;
     scroll-behavior: smooth;
+    @include small-screens {
+        scroll-snap-type: none;
+    }
     .section {
         display: flex;
         flex-direction: column;

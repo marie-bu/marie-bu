@@ -717,6 +717,11 @@ main {
 main::-webkit-scrollbar {
   display: none;
 }
+@media screen and (max-width: 985px) {
+  main {
+    scroll-snap-type: none;
+  }
+}
 main .section {
   display: flex;
   flex-direction: column;
@@ -889,7 +894,6 @@ main.active .section {
 }
 @media screen and (max-width: 985px) {
   #career {
-    padding-top: 0;
     gap: 1rem 2rem;
   }
 }
@@ -899,8 +903,7 @@ main.active .section {
 }
 .career-text {
   flex: 100%;
-  padding: 1.5rem;
-  height: 15rem;
+  padding: 1rem;
   order: 4;
 }
 .career-text.hidden {
