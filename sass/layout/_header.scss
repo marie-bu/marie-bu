@@ -26,7 +26,6 @@ header {
         img {
             @include box-shadow;
             margin-bottom: 1rem;
-            filter: grayscale(100%);
         }
         h1, h2, .profile-contact {
             width: 100%;
@@ -39,9 +38,6 @@ header {
         }
         img, h1, h2, .profile-contact {
             transition: opacity $short-trans ease-in-out 650ms;
-        }
-        &:hover img, &:focus img {
-            filter: none;
         }
         @include small-screens {
             position: relative;
