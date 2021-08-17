@@ -1,93 +1,130 @@
-.btn {
-    &-cv {
-        @include btn-color($cv-dark, $cv-light);
-    }
-    &-career {
-        @include btn-color($career-dark, $career-light);
-    }
-    &-refer {
-        @include btn-color($refer-dark , $refer-light);
-    }
-    &-skills {
-        @include btn-color($skills-dark, $skills-light);
-    }
-    &-portfolio {
-        @include btn-color($portfolio-dark, $portfolio-light);
-    }
-    &-contact {
-        @include btn-color($contact-dark, $contact-light);
-    }
+// generic buttons
+
+.btn-stripe {
+    @include btn;
+    font-size: 1.2rem;
     &-home {
-        @include btn;
-        @include btn-color(var(--bg-grey), var(--text-grey));
+        height: 100%;
+        max-height: 7rem;
+        @include small-screens {
+            max-height: none;
+        }
     }
     &-nav {
-        border: none;
-        background: none;
-        color: var(--text-grey);
-        .fa-times {
-            display: none;
-        }
-        &.btn-close {
-            .fa-times {
-                display: inline-block;
-            }
-            .fa-bars {
-                display: none;
-            }
-        }
-        &.hidden {
-            display: none;
-        }
+        height: 3rem;
+    }
+    &-cv {
+        @include stripe-btn-color($cv-middle, $cv-dark, $cv-light, 2deg);
+    }
+    &-career {
+        @include stripe-btn-color($career-middle, $career-dark, $career-light, -2deg);
+        animation-delay: 450ms;
+    }
+    &-refer {
+        @include stripe-btn-color($refer-middle, $refer-dark, $refer-light, -2deg);
+        animation-delay: 550ms;
+    }
+    &-skills {
+        @include stripe-btn-color($skills-middle, $skills-dark, $skills-light, 2deg);
+        animation-delay: 650ms;
+    }
+    &-portfolio {
+        @include stripe-btn-color($portfolio-middle, $portfolio-dark, $portfolio-light, 2deg);
+        animation-delay: 750ms;
+    }
+    &-contact {
+        @include stripe-btn-color($contact-middle, $contact-dark, $contact-light, -2deg);
+        animation-delay: 850ms;
     }
 }
 
 .btn-circle {
     @include btn;
     @include box-shadow;
-    &-l {
-        @include circle(13rem, 1.2rem);
+    &-cv {
+        @include btn-circle-color($cv-dark, $cv-light);
     }
-    &-m {
+    &-career {
+        @include btn-circle-color($career-dark, $career-light);
+    }
+    &-refer {
+        @include btn-circle-color($refer-dark , $refer-light);
+    }
+    &-portfolio {
+        @include btn-circle-color($portfolio-dark, $portfolio-light);
+    }
+    &-contact {
+        @include btn-circle-color($contact-dark, $contact-light);
+    }
+    &-home {
+        @include btn-circle-color(var(--bg-grey), var(--text-grey));
+        box-shadow: none;
+        &:hover, &:focus {
+            box-shadow: none;
+        }
+    }
+    &-l {
         @include circle(9rem, 1rem);
     }
-    &-s {
+    &-m {
         @include circle(7rem, 1rem);
     }
-    &-xs {
-        @include circle(5rem, 0.9rem);
-    }
-}
-
-.btn-icon {
-    @include btn;
-    @include box-shadow;
-    &-contact {
-        @include circle(5rem, 2.5rem);
-        img {
-            @include circle(2.5rem, 1rem);
-        }
-        #malt-dark {
-            display: none;
-        }
-        &:hover, &:focus {
-            #malt-light {
-                display: none;
-            }
-            #malt-dark {
-                display: inline-block;
-            }
-        }
-    }
     &-s {
-        @include circle(2.5rem, 1.25rem);
-        filter: none;
-        animation: none;
+        @include circle(5rem, 0.9rem);
     }
     &-xs {
         @include circle(2rem, 1rem);
     }
-    &#send-mail {
-        margin-left: 1.5rem;
+}
+
+// specificities 
+
+#btn-return-home {
+    @include circle(2.4rem, 1.2rem);
+    margin-top: 1.2rem;
+}
+
+#btn-nav-mobile {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.6rem;
+    right: 1rem;
+    background: none;
+    color: var(--text-grey);
+    .fa-times {
+        display: none;
     }
+    &.btn-close {
+        .fa-times {
+            display: inline-block;
+        }
+        .fa-bars {
+            display: none;
+        }
+    }
+    &.hidden {
+        display: none;
+    }
+}
+
+.btn-circle-social {
+    @include circle(5rem, 2.5rem);
+    img {
+        @include circle(2.5rem, 1rem);
+    }
+    #malt-dark {
+        display: none;
+    }
+    &:hover, &:focus {
+        #malt-light {
+            display: none;
+        }
+        #malt-dark {
+            display: inline-block;
+        }
+    }
+}
+
+#send-mail {
+    margin-left: 1.5rem;
 }

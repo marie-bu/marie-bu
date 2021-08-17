@@ -7,21 +7,21 @@ const lightModeSwitch = document.querySelector(".switch-mode");
 const root = document.querySelector(":root");
 
 const header = document.querySelector("header");
-const navBtns = document.querySelectorAll("nav .btn-icon-s");
-const returnHomeBtn = document.querySelector("nav .btn-home");
+const navBtns = document.querySelectorAll(".btn-stripe-nav");
+const returnHomeBtn = document.querySelector("#btn-return-home");
 const home = document.querySelector("#home");
-const homeBtns = home.querySelectorAll(".ball-l");
+const homeBtns = home.querySelectorAll(".btn-stripe-home");
 const main = document.querySelector("main");
 const sections = document.querySelectorAll(".section");
 
-const burgerMenuBtn = document.querySelector(".btn-nav");
+const burgerMenuBtn = document.querySelector("#btn-nav-mobile");
 
 const careerTitles = document.querySelectorAll(".career-title");
 const careerTexts = document.querySelectorAll(".career-text");
 
 const projectsBtnsContainer = document.querySelector(".btns");
 const projectsBtns = projectsBtnsContainer.querySelectorAll("button");
-const btnsMore = document.querySelectorAll(".btn-icon-more");
+const btnsMore = document.querySelectorAll(".btn-circle-more");
 const projects = document.querySelectorAll(".project");
 
 // buttons and links - focus blur

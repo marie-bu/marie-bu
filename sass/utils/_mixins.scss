@@ -6,7 +6,6 @@
 }
 
 @mixin btn {
-    border: none;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +13,7 @@
     padding: 1rem;
 }
 
-@mixin btn-color($light, $dark) {
+@mixin btn-circle-color($light, $dark) {
     background-color: $light;
     color: $dark;
     transition: $short-trans ease-in-out;
@@ -30,20 +29,23 @@
     }
 }
 
-@mixin ball-color($center, $outer, $text) {
-    position: relative;
-    background: radial-gradient(circle at 4rem 4rem, $center, $outer);
+@mixin stripe-btn-color($center, $outer, $text, $angle) {
+    width: 110%;
     color: $text;
-    box-shadow: inset 1px 1px 15px rgba($color: darken($outer, 15%), $alpha: 0.2),
-                inset -2px -1px 40px rgba($color: darken($outer, 5%), $alpha: 0.3),
-                0 0 1px rgba($color-shadow, 0.5);
-    filter: grayscale(100%);
-    animation: jump 1000ms ease infinite;
-    &:hover, &:focus {
-        filter: none;
+    background: radial-gradient(circle at 15% 15%, $center, $outer);
+    box-shadow: inset 1px 1px 15px rgba($color: darken($outer, 15%), $alpha: 0.4),
+    inset -2px -1px 40px rgba($color: darken($outer, 5%), $alpha: 0.6);
+    transform: rotate($angle);
+    transition: transform 300ms;
+    animation: appear-opacity 80ms ease-in 350ms backwards;
+    &:hover, &:focus, &.active {
+        transform: rotate(0);
+        box-shadow: inset 1px 1px 15px rgba($color: darken($outer, 17%), $alpha: 0.8),
+        inset -2px -1px 40px rgba($color: darken($outer, 7%), $alpha: 1);
+        color: darken($color: $outer, $amount: 20%);
     }
-    &.active {
-        box-shadow: inset 1px 1px 3px $color-shadow;
+    @include small-screens {
+        transform: rotate(0);
     }
 }
 
