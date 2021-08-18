@@ -101,7 +101,7 @@ sections.forEach(section => observer.observe(section));
 
 burgerMenuBtn.addEventListener("click", ()=> {
     burgerMenuBtn.classList.toggle("btn-close");
-    home.classList.toggle("narrowed");
+    home.classList.toggle("hidden");
 })
 
 // Career 
@@ -132,7 +132,7 @@ projectsBtns.forEach((btn) => {
             } else {
                 project.classList.remove("active");
                 project.querySelector(".project-img").classList.remove("hidden");
-                project.querySelector(".btn-icon-more").classList.remove("active");
+                project.querySelector(".btn-circle-more").classList.remove("active");
             }
         });
     });
