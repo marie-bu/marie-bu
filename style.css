@@ -815,7 +815,6 @@ main .section {
   padding: 2rem 1rem 1.5rem 1rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  border-bottom: 0.1rem #CC5500 solid;
   cursor: pointer;
 }
 #portfolio .btns figcaption img {
