@@ -10,7 +10,7 @@
     background-color: var(--bg-grey);
     @include box-shadow;
     cursor: pointer;
-    transition: $short-trans ease-in-out;
+    transition: 200ms ease-in-out;
     .slider {
         @include circle(1.1rem, none);
         background-color: var(--text-grey);

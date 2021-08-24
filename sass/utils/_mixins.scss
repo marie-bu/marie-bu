@@ -16,7 +16,7 @@
 @mixin btn-circle-color($light, $dark) {
     background-color: $light;
     color: $dark;
-    transition: $short-trans ease-in-out;
+    transition: 200ms ease-in-out;
     &:hover, &:focus {
         background-color: $dark;
         color: $light;
