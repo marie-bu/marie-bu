@@ -17,146 +17,156 @@
         <div class="profile">
             <img src="pictures/profile.png" alt="">
             <h1>Marie Burki</h1>
-            <h2 class="normal-uppercase">Développeuse Web<br><span class="light-uppercase">front-end</span></h2>
+            <h2>Développeuse Web<br><span class="light">front-end</span></h2>
             <div class="profile-contact">
-                <a href="mailto:marie.buerki@gmail.com" target="_blank" class="btn-circle btn-circle-home btn-circle-xs"><i
-                        class="fas fa-at"></i></a>
+                <a href="mailto:marie.buerki@gmail.com" target="_blank"
+                    class="btn-circle btn-circle-home btn-circle-xs"><i class="fas fa-at"></i></a>
                 <a href="https://github.com/marie-bu" target="_blank" class="btn-circle btn-circle-home btn-circle-xs">
                     <i class="fab fa-github"></i></a>
-                <a href="http://linkedin.com/in/marie-bu" target="blank" class="btn-circle btn-circle-home btn-circle-xs">
+                <a href="http://linkedin.com/in/marie-bu" target="blank"
+                    class="btn-circle btn-circle-home btn-circle-xs">
                     <i class="fab fa-linkedin"></i></a>
             </div>
-            <button class="hidden" id="btn-nav-mobile"><i class="fas fa-bars"></i><i
-                    class="fas fa-times"></i></button>
+            <button class="hidden" id="btn-nav-mobile"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
         </div>
-        <nav>
-            <a href="#cv" class="btn-stripe-cv cv btn-stripe btn-stripe-nav"><i class="fas fa-user-alt"></i></a>
-            <a href="#career" class="btn-stripe-career career btn-stripe btn-stripe-nav"><i
-                    class="fas fa-comment"></i></a>
-            <a href="#refer" class="btn-stripe-refer refer btn-stripe btn-stripe-nav"><i
-                    class="fas fa-thumbs-up"></i></a>
-            <a href="#skills" class="btn-stripe-skills skills btn-stripe btn-stripe-nav"><i
-                    class="fas fa-tools"></i></a>
-            <a href="#portfolio" class="btn-stripe-portfolio portfolio btn-stripe btn-stripe-nav"><i
-                    class="fas fa-laptop-code"></i></a>
-            <a href="#contact" class="btn-stripe-contact contact btn-stripe btn-stripe-nav"><i
-                    class="fas fa-envelope"></i></a>
-            <button class="btn-circle btn-circle-home" id="btn-return-home"><i class="fas fa-home"></i></button>
-        </nav>
     </header>
     
+    <nav>
+        <a href="#profile" class="btn-stripe-cv cv btn-stripe"><i class="fas fa-user-alt"></i><span>Profile</span></a>
+        <a href="#career" class="btn-stripe-career career btn-stripe"><i
+                class="fas fa-comment"></i><span>Parcours</span></a>
+        <a href="#refer" class="btn-stripe-refer refer btn-stripe"><i
+                class="fas fa-thumbs-up"></i><span>Recommandation</span></a>
+        <a href="#skills" class="btn-stripe-skills skills btn-stripe"><i
+                class="fas fa-tools"></i><span>Compétences</span></a>
+        <a href="#portfolio" class="btn-stripe-portfolio portfolio btn-stripe"><i
+                class="fas fa-laptop-code"></i><span>Portfolio</span></a>
+        <a href="#contact" class="btn-stripe-contact contact btn-stripe"><i
+                class="fas fa-envelope"></i><span>Contact</span></a>
+        <button class="btn-circle btn-circle-home" id="btn-return-home"><i class="fas fa-home"></i></button>
+    </nav>
+
     <button class="switch-mode">
         <div class="slider"></div>
     </button>
 
     <main>
-        <section id="home">
-            <a href="#cv" class="btn-stripe-cv btn-stripe btn-stripe-home">Curriculum Vitae</a>
-            <a href="#career" class="btn-stripe-career btn-stripe btn-stripe-home">Parcours</a>
-            <a href="#refer" class="btn-stripe-refer btn-stripe btn-stripe-home">Recommandation</a>
-            <a href="#skills" class="btn-stripe-skills btn-stripe btn-stripe-home">Compétences</a>
-            <a href="#portfolio" class="btn-stripe-portfolio btn-stripe btn-stripe-home">Portfolio</a>
-            <a href="#contact" class="btn-stripe-contact btn-stripe btn-stripe-home">Contact</a>
-        </section>
+        <section class="section" id="profile">
+            <div class="profile">
+                <img src="pictures/profile.png" alt="">
+                <div class="profile-about">
+                    <h1>Marie Burki</h1>
+                    <h2 class="light">Développeuse Front-end</h2>
+                    <h3>Mes langages<br><span class="light">HTML, CSS/SCSS, Javascript</span></h3>
+                    <h3>Mes intérêts<br><span class="light">UI/UX, Green IT, Clean Code</span></h3>
+                </div>
+                <div class="profile-buttons">
+                    <h3>Curriculum Vitae</h3>
+                    <div>
+                        <button class="btn-circle-cv btn-circle btn-circle-xs" id="open-cv"><i class="far fa-eye"></i></button>
+                        <a href="CV - Marie Burki.pdf" download  target="blank" class="btn-circle-cv btn-circle btn-circle-xs"><i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </div>
 
-        <section class="section" id="cv">
-            <div class="cv-content">
-                <div class="cv-content-left">
-                    <div class="cv-content-top">
-                        <img src="pictures/profile.png" alt="">
+            <div class="modal-bg" id="modal-cv">
+                <div class="cv-content">
+                    <div class="cv-content-left">
+                        <div class="cv-content-top">
+                            <img src="pictures/profile.png" alt="">
+                        </div>
+                        <div class="cv-content-left-contact">
+                            <h4>Marie Burki</h4>
+                            <p><i class="far fa-envelope"></i>marie.buerki@gmail.com</p>
+                            <p><i class="fab fa-github"></i>www.github.com/marie-bu</p>
+                            <p><i class="fas fa-phone"></i>06 03 10 58 58</p>
+                            <p><i class="fas fa-map-marker-alt"></i>1 rue des Lilas<br>74100, Annemasse</p>
+                        </div>
+                        <div class="cv-content-left-skills">
+                            <h4>Compétences</h4>
+                            <p>Javascript</p>
+                            <p>CSS3</p>
+                            <p>HTML5</p>
+                            <p>Sass</p>
+                            <p>Accessibilité</p>
+                            <p>Git et GitHub</p>
+                        </div>
+                        <div class="cv-content-left-lang">
+                            <h4>Langues</h4>
+                            <p>Français</p>
+                            <p>Anglais</p>
+                        </div>
                     </div>
-                    <div class="cv-content-left-contact">
-                        <h4>Marie Burki</h4>
-                        <p><i class="far fa-envelope"></i>marie.buerki@gmail.com</p>
-                        <p><i class="fab fa-github"></i>www.github.com/marie-bu</p>
-                        <p><i class="fas fa-phone"></i>06 03 10 58 58</p>
-                        <p><i class="fas fa-map-marker-alt"></i>1 rue des Lilas<br>74100, Annemasse</p>
+                    <div class="cv-content-right">
+                        <div class="cv-content-top">
+                            <h3>Développeuse<br>front-end</h3>
+                        </div>
+                        <div class="cv-content-right-dev">
+                            <h4>Expérience dans le développement</h4>
+                            <p>
+                                <span class="bold">Design et intégration de mon portfolio</span><br>
+                                <span class="light">Projet personnel - juin 2021 à juillet 2021</span><br>
+                                Création de l'UI design et intégration de mon portfolio ; accent porté sur la maintenabilité
+                                du code et l'intégration
+                                responsive.
+                            </p>
+                            <p>
+                                <span class="bold">Design et intégration d'un site web</span><br>
+                                <span class="light">Eco Arava - mai 2021 à juin 2021</span><br>
+                                Création de l'UI design et implémentation du code ; visuel des pages, contenu dynamique
+                                et une fonction de tri. Le projet remplacera à terme le site actuel, un ancien site
+                                Wordpress que j'avais monté il y a plusieurs années (création du logo et du contenu
+                                compris).
+                            </p>
+                            <p>
+                                <span class="bold">Divers projets de formation</span><br>
+                                <span class="light">OpenClassrooms - nov 2020 à avril 2021</span><br>
+                                Projets concrets tirés de cas d'entreprises, de l'intégration HTML / CSS à
+                                l'implémentation de fonctionnalités Javascript (modales, formulaires, tris, filtres,
+                                contenu dynamique, modification du DOM, ...) en passant par Git, GitHub, Sass et
+                                l'accessibilité.
+                            </p>
+                        </div>
+                        <div class="cv-content-right-prior">
+                            <h4>Expérience précédente</h4>
+                            <p>
+                                <span class="bold">Dernier poste : serveuse puis responsable adjointe de bar</span><br>
+                                <span class="light">Bruxelles Café, Lausanne, Suisse - mai 2017 à déc 2019</span>
+                            </p>
+                            <p>
+                                <span class="bold">Divers postes de serveuse, cheffe de rang</span><br>
+                                <span class="light">Restaurants, cafés, bars - mai 2005 à avril 2017</span>
+                            </p>
+                        </div>
+                        <div class="cv-content-right-school">
+                            <h4>éducation</h4>
+                            <p>
+                                <span class="bold">Développement Front-end (1/3 du parcours)</span><br>
+                                <span class="light">OpenClassrooms - nov 2020 à avril 2021</span>
+                            </p>
+                            <p>
+                                <span class="bold">Etudes bouddhiques</span><br>
+                                <span class="light">Université de Katmandou, Népal - juin 2010 à mai 2012</span>
+                            </p>
+                            <p>
+                                <span class="bold">Bachelor en Langues et Civilisations Indiennes et
+                                    Tibétaines</span><br>
+                                <span class="light">Université de Lausanne, Suisse - sept 2008 à août 2011</span>
+                            </p>
+                            <p>
+                                <span class="bold">Cambridge Certificate in Advanced English</span><br>
+                                <span class="light">Cairns Language Center, Australie - sept 2007 à déc 2007</span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="cv-content-left-skills">
-                        <h4>Compétences</h4>
-                        <p>Javascript</p>
-                        <p>CSS3</p>
-                        <p>HTML5</p>
-                        <p>Sass</p>
-                        <p>Accessibilité</p>
-                        <p>Git et GitHub</p>
-                    </div>
-                    <div class="cv-content-left-lang">
-                        <h4>Langues</h4>
-                        <p>Français</p>
-                        <p>Anglais</p>
-                    </div>
+                    <button class="btn-circle-cv btn-circle btn-circle-xs" id="close-cv"><i class="fas fa-times"></i></button>
                 </div>
-                <div class="cv-content-right">
-                    <div class="cv-content-top">
-                        <h3>Développeuse<br>front-end</h3>
-                    </div>
-                    <div class="cv-content-right-dev">
-                        <h4>Expérience dans le développement</h4>
-                        <p>
-                            <span class="bold">Design et intégration de mon portfolio</span><br>
-                            <span class="light">Projet personnel - juin 2021 à juillet 2021</span><br>
-                            Création de l'UI design et intégration de mon portfolio ; accent porté sur la maintenabilité
-                            du code et l'intégration
-                            responsive.
-                        </p>
-                        <p>
-                            <span class="bold">Design et intégration d'un site web</span><br>
-                            <span class="light">Eco Arava - mai 2021 à juin 2021</span><br>
-                            Création de l'UI design et implémentation du code ; visuel des pages, contenu dynamique
-                            et une fonction de tri. Le projet remplacera à terme le site actuel, un ancien site
-                            Wordpress que j'avais monté il y a plusieurs années (création du logo et du contenu
-                            compris).
-                        </p>
-                        <p>
-                            <span class="bold">Divers projets de formation</span><br>
-                            <span class="light">OpenClassrooms - nov 2020 à avril 2021</span><br>
-                            Projets concrets tirés de cas d'entreprises, de l'intégration HTML / CSS à
-                            l'implémentation de fonctionnalités Javascript (modales, formulaires, tris, filtres,
-                            contenu dynamique, modification du DOM, ...) en passant par Git, GitHub, Sass et
-                            l'accessibilité.
-                        </p>
-                    </div>
-                    <div class="cv-content-right-prior">
-                        <h4>Expérience précédente</h4>
-                        <p>
-                            <span class="bold">Dernier poste : serveuse puis responsable adjointe de bar</span><br>
-                            <span class="light">Bruxelles Café, Lausanne, Suisse - mai 2017 à déc 2019</span>
-                        </p>
-                        <p>
-                            <span class="bold">Divers postes de serveuse, cheffe de rang</span><br>
-                            <span class="light">Restaurants, cafés, bars - mai 2005 à avril 2017</span>
-                        </p>
-                    </div>
-                    <div class="cv-content-right-school">
-                        <h4>éducation</h4>
-                        <p>
-                            <span class="bold">Développement Front-end (1/3 du parcours)</span><br>
-                            <span class="light">OpenClassrooms - nov 2020 à avril 2021</span>
-                        </p>
-                        <p>
-                            <span class="bold">Etudes bouddhiques</span><br>
-                            <span class="light">Université de Katmandou, Népal - juin 2010 à mai 2012</span>
-                        </p>
-                        <p>
-                            <span class="bold">Bachelor en Langues et Civilisations Indiennes et
-                                Tibétaines</span><br>
-                            <span class="light">Université de Lausanne, Suisse - sept 2008 à août 2011</span>
-                        </p>
-                        <p>
-                            <span class="bold">Cambridge Certificate in Advanced English</span><br>
-                            <span class="light">Cairns Language Center, Australie - sept 2007 à déc 2007</span>
-                        </p>
-                    </div>
-                </div>
-                <a href="CV - Marie Burki.pdf" download class="btn-circle-cv btn-circle btn-circle-m" target="blank"
-                    id="download-cv">Télécharger le CV</a>
             </div>
         </section>
 
         <section class="section" id="career">
-            <h3 class="before career-title btn-circle-career btn-circle btn-circle-l">Parcours antérieur</h3>
-            <p class="before career-text hidden">De formation universitaire, j'étudiais
+            <h3 class="before career-title active">Parcours antérieur</h3>
+            <p class="before career-text text active">De formation universitaire, j'étudiais
                 les langues et les civilisations orientales (l'Inde et le Bouddhisme particulièrement). J'ai toujours un
                 grand intérêt personnel pour ces sujets,
                 mais les études universitaires ne me plaisaient pas particulièrement.<br>
@@ -166,9 +176,10 @@
                 Mais, en 2019, l'arrivée de mon fils initia une réflexion sur mes envies et projets
                 professionnels à long terme.
             </p>
-            <h3 class="change career-title btn-circle-career btn-circle btn-circle-l">Pourquoi le développement front-end ?
+            <h3 class="change career-title">Pourquoi le développement
+                front-end ?
             </h3>
-            <p class="change career-text hidden">Alors que je réfléchissais à ma reconversion, deux facteurs majeurs
+            <p class="change career-text text">Alors que je réfléchissais à ma reconversion, deux facteurs majeurs
                 m'amenèrent sur ma nouvelle voie.<br>
                 Tout d'abord, j'avais envie d'apprendre quelque chose de nouveau, de relever un défi, mais aussi de
                 pouvoir appliquer
@@ -181,8 +192,9 @@
                 C'est ainsi que je me suis lancée dans l'apprentissage du développement front-end. Sans regret,
                 car depuis que j'ai commencé à coder, je découvre un métier que j'adore.
             </p>
-            <h3 class="after career-title btn-circle-career btn-circle btn-circle-l active">Parcours de développeuse</h3>
-            <p class="after career-text">Fin 2020, je suis maman au foyer et j'entame le parcours diplômant de
+            <h3 class="after career-title">Parcours de développeuse
+            </h3>
+            <p class="after career-text text">Fin 2020, je suis maman au foyer et j'entame le parcours diplômant de
                 développeur front-end d'OpenClassrooms pendant mon temps libre.<br>
                 Mais à un tiers du parcours, des contraintes de temps et d'argent me poussent à m'adapter et je
                 me dirige vers l'alternance pour le reste de la formation.<br>
@@ -195,23 +207,23 @@
         </section>
 
         <section class="section" id="refer">
-            <h3>"Une de mes meilleures étudiantes"</h3>
+            <h3 class="h1">"Une de mes meilleures étudiantes"</h3>
             <h4>Recommandation d'Ibrahima Ciss, ingénieur logiciel web & iOS, mentor chez OpenClassrooms</h4>
             <quote>" J'ai eu l'occasion de mentorer Marie sur plusieurs projets. Malgré qu'elle soit Junior
                 Développeuse, laissez moi vous dire qu'elle est de loin une des meilleures étudiantes que j'ai eu à
                 mentorer. Elle est très pragmatique et perfectionniste, elle cherche toujours à améliorer/parfaire
                 la solution existante. En outre elle a une bonne maitrise des technologies du Web. Si vous voulez
                 des applications optimisées et accessible pour tous, je vous conseille fortement Marie. "</quote>
-            <p>Reçue sur Malt <a href="http://malt.fr/profile/marieb" target="_blank"
+            <p id="refer-link">Reçue sur Malt <a href="http://malt.fr/profile/marieb" target="_blank"
                     class="btn-circle-refer btn-circle btn-circle-xs"><i class="fas fa-external-link-alt"></i></a></p>
         </section>
 
         <section class="section" id="skills">
-            <h3>Compétences sur le parcours diplômant d'OpenClassrooms</h3>
-            <p class="bold">
-                <span class="perso"><i class="fas fa-heart"></i>Personnelles</span>
-                <span class="done"><i class="fas fa-star"></i>Acquises</span>
-                <span class="to-do light"><i class="far fa-star"></i>À étudier</span>
+            <h3><span class="h1">Compétences</span><br>sur le parcours diplômant d'OpenClassrooms</h3>
+            <p>
+                <span class="perso h3"><i class="fas fa-heart"></i>Personnelles</span>
+                <span class="done h3"><i class="fas fa-star"></i>Acquises</span>
+                <span class="to-do light h3"><i class="far fa-star"></i>À étudier</span>
             </p>
             <ul>
                 <li class="perso"><i class="fas fa-heart"></i>Affinité avec l'UI design</li>
@@ -234,34 +246,51 @@
 
         <section class="section" id="portfolio">
             <div class="btns">
-                <button class="mon-portfolio btn-circle-portfolio btn-circle btn-circle-s">Portfolio</button>
-                <button class="ecoarava btn-circle-portfolio btn-circle btn-circle-s active">Eco Arava</button>
-                <button class="fisheye btn-circle-portfolio btn-circle btn-circle-s">Fisheye</button>
-                <button class="gameon btn-circle-portfolio btn-circle btn-circle-s">GameOn</button>
-                <button class="ohmyfood btn-circle-portfolio btn-circle btn-circle-s">Oh my food</button>
-                <button class="reservia btn-circle-portfolio btn-circle btn-circle-s">Reservia</button>
+                <figcaption class="mon-portfolio h3">
+                    <img src="pictures/portfolio.png" alt="">
+                    <caption>Portfolio</caption>
+                </figcaption>
+                <figcaption class="ecoarava h3">
+                    <img src="pictures/ecoarava.png" alt="">
+                    <caption>Eco Arava</caption>
+                </figcaption>
+                <figcaption class="fisheye h3">
+                    <img src="pictures/fisheye.png" alt="">
+                    <caption>Fisheye</caption>
+                </figcaption>
+                <figcaption class="gameon h3">
+                    <img src="pictures/gameon.png" alt="">
+                    <caption>GameOn</caption>
+                </figcaption>
+                <figcaption class="ohmyfood h3">
+                    <img src="pictures/ohmyfood.png" alt="">
+                    <caption>Oh My Food</caption>
+                </figcaption>
+                <figcaption class="reservia h3">
+                    <img src="pictures/reservia.png" alt="">
+                    <caption>Reservia</caption>
+                </figcaption>
             </div>
 
-            <div class="projects">
+            <div class="modal-bg" id="modal-project">
                 <div class="mon-portfolio project">
+                    <button class="btn-circle-portfolio btn-circle btn-circle-xs close-project"><i class="fas fa-times"></i></button>
                     <div class="project-main">
-                        <p class="h5 project-main-type">Projet personnel</p>
                         <div class="project-main-title">
-                            <h4 class="h3">Mon portfolio</h4>
+                            <h4 class="h1">Mon portfolio</h4>
                             <h5>Conception et réalisation d'un site web</h5>
+                            <h5 class="light">Projet personnel</h5>
                         </div>
-                        <div class="project-main-links">
-                            <button class="btn-circle-portfolio btn-circle btn-circle-xs btn-circle-more"><i
-                                    class="fas fa-ellipsis-v"></i></button>
-                            <a href="https://github.com/marie-bu/marie-bu/tree/master" target="blank"
-                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-switch">
                         <img src="pictures/portfolio.png" alt="" class="project-img">
-                        <div class="project-details">
-                            <ul class="project-details-skills ">
-                                <li class="btn-circle-xs icon-tools"><i class="fas fa-tools"></i></li>
+                    </div>
+                    <div class="project-details">
+                        <p>Pour ce projet, j'ai souhaité créer une interface simple avec un contenu concis. J'ai
+                            voulu mettre l'accent sur la maintenabilité de mon code mais aussi sur le côté
+                            responsive. 
+                        </p>
+                        <div class="project-details-skills">
+                            <h5><i class="fas fa-tools"></i>Compétences</h5>
+                            <ul>
                                 <li>UI design</li>
                                 <li>Responsive design</li>
                                 <li>HTML5</li>
@@ -269,34 +298,34 @@
                                 <li>Javascript</li>
                                 <li>Sass</li>
                             </ul>
-                            <p>Pour ce projet, j'ai souhaité créer une interface simple avec un contenu concis. J'ai
-                                voulu mettre l'accent sur la maintenabilité de mon code mais aussi sur le côté
-                                responsive. </p>
+                        </div>
+                        <div class="project-details-links">
+                            <a href="https://github.com/marie-bu/marie-bu/tree/master" target="blank"
+                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="ecoarava project active">
+                <div class="ecoarava project">
+                    <button class="btn-circle-portfolio btn-circle btn-circle-xs close-project"><i class="fas fa-times"></i></button>
                     <div class="project-main">
-                        <p class="h5 project-main-type">Projet personnel</p>
                         <div class="project-main-title">
-                            <h4 class="h3">Eco Arava</h4>
+                            <h4 class="h1">Eco Arava</h4>
                             <h5>Conception et réalisation d'un site web</h5>
+                            <h5 class="light">Projet personnel</h5>
                         </div>
-                        <div class="project-main-links">
-                            <button class="btn-circle-portfolio btn-circle btn-circle-xs btn-circle-more"><i
-                                    class="fas fa-ellipsis-v"></i></button>
-                            <a href="https://github.com/marie-bu/EcoArava" target="blank"
-                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
-                            <a href="https://marie-bu.github.io/EcoArava/" target="blank"
-                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-switch">
                         <img src="pictures/ecoarava.png" alt="" class="project-img">
-                        <div class="project-details">
-                            <ul class="project-details-skills ">
-                                <li class="btn-circle-xs icon-tools"><i class="fas fa-tools"></i></li>
+                    </div>
+                    <div class="project-details">
+                        <p>Ce projet est une nouvelle version du site actuel <a href="http://ecoarava.com"
+                                target="blank" class="bold">www.ecoarava.com</a>, que j'avais monté sur WordPress il
+                            y a des années.<br>
+                            J'ai tout créé et codé (design, logo, contenu, fonctionnalités...)<br>A l'avenir, on y
+                            ajoutera peut-être le back-end pour le rendre opérationnel.
+                        </p>
+                        <div class="project-details-skills">
+                            <h5><i class="fas fa-tools"></i>Compétences</h5>
+                            <ul>
                                 <li>UI design</li>
                                 <li>Responsive design</li>
                                 <li>Création d'un logo</li>
@@ -307,159 +336,161 @@
                                 <li>Javascript</li>
                                 <li>Sass</li>
                             </ul>
-                            <p>Ce projet est une nouvelle version du site actuel <a href="http://ecoarava.com"
-                                    target="blank" class="bold">www.ecoarava.com</a>, que j'avais monté sur WordPress il
-                                y a des années.<br>
-                                J'ai tout créé et codé (design, logo, contenu, fonctionnalités...)<br>A l'avenir, on y
-                                ajoutera peut-être le back-end pour le rendre opérationnel.
-                            </p>
+                        </div>
+                        <div class="project-details-links">
+                            <a href="https://github.com/marie-bu/EcoArava" target="blank"
+                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
+                            <a href="https://marie-bu.github.io/EcoArava/" target="blank"
+                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="fisheye project">
+                    <button class="btn-circle-portfolio btn-circle btn-circle-xs close-project"><i class="fas fa-times"></i></button>
                     <div class="project-main">
-                        <p class="h5 project-main-type">Projet OpenClassrooms</p>
                         <div class="project-main-title">
-                            <h4 class="h3">Fisheye</h4>
+                            <h4 class="h1">Fisheye</h4>
                             <h5>Créer un site accessible</h5>
+                            <h5 class="light">Projet OpenClassrooms</h5>
                         </div>
-                        <div class="project-main-links">
-                            <button class="btn-circle-portfolio btn-circle btn-circle-xs btn-circle-more"><i
-                                    class="fas fa-ellipsis-v"></i></button>
-                            <a href="https://github.com/marie-bu/MarieBurki_6_23022021" target="blank"
-                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
-                            <a href="https://marie-bu.github.io/MarieBurki_6_23022021/" target="blank"
-                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-switch">
                         <img src="pictures/fisheye.png" alt="" class="project-img">
-                        <div class="project-details">
-                            <ul class="project-details-skills ">
-                                <li class="btn-circle-xs icon-tools"><i class="fas fa-tools"></i></li>
+                    </div>
+                    <div class="project-details">
+                        <p>Ce projet est axé sur l'approfondissement des connaissances en Javascript,
+                            particulièrement
+                            la gestion des évènements d'un site (modales, contenu dynamique, incrémentation de
+                            likes,
+                            fonctions de filtres et de tri), le développement d'une application web modulaire avec
+                            les
+                            design patterns et l'écriture d'un code maintenable.<br>
+                            Le deuxième objectif est de s'assurer de l'accessibilité du site (screen readers et
+                            accessibilité au clavier).
+                        </p>
+                        <div class="project-details-skills">
+                            <h5><i class="fas fa-tools"></i>Compétences</h5>
+                            <ul>
                                 <li>Accessibilité</li>
                                 <li>Javascript</li>
                                 <li>CSS3</li>
                                 <li>Sass</li>
                                 <li>HTML5</li>
                             </ul>
-                            <p>Ce projet est axé sur l'approfondissement des connaissances en Javascript,
-                                particulièrement
-                                la gestion des évènements d'un site (modales, contenu dynamique, incrémentation de
-                                likes,
-                                fonctions de filtres et de tri), le développement d'une application web modulaire avec
-                                les
-                                design patterns et l'écriture d'un code maintenable.<br>
-                                Le deuxième objectif est de s'assurer de l'accessibilité du site (screen readers et
-                                accessibilité au clavier).
-                            </p>
+                        </div>
+                        <div class="project-details-links">
+                            <a href="https://github.com/marie-bu/MarieBurki_6_23022021" target="blank"
+                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
+                            <a href="https://marie-bu.github.io/MarieBurki_6_23022021/" target="blank"
+                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="gameon project">
+                    <button class="btn-circle-portfolio btn-circle btn-circle-xs close-project"><i class="fas fa-times"></i></button>
                     <div class="project-main">
-                        <p class="h5 project-main-type">Projet OpenClassrooms</p>
                         <div class="project-main-title">
-                            <h4 class="h3">Game On</h4>
+                            <h4 class="h1">Game On</h4>
                             <h5>Créer un formulaire d'inscription avec Javascript</h5>
+                            <h5 class="light">Projet OpenClassrooms</h5>
                         </div>
-                        <div class="project-main-links">
-                            <button class="btn-circle-portfolio btn-circle btn-circle-xs btn-circle-more"><i
-                                    class="fas fa-ellipsis-v"></i></button>
+                        <img src="pictures/gameon.png" alt="" class="project-img">
+                    </div>
+                    <div class="project-details">
+                        <p>Ce projet est la première approche de Javascript dans le parcours Front-end
+                            d'OpenClassrooms.
+                            L'objectif est d'apprivoiser le language en implémentant un formulaire d'inscription :
+                            ouverture et fermeture d'une modale, vérification de certains critères pour chaque
+                            input,
+                            apparition de messages d'erreur et de confirmation.
+                        </p>
+                        <div class="project-details-skills">
+                            <h5><i class="fas fa-tools"></i>Compétences</h5>
+                            <ul class="project-details-skills ">
+                                <li>Javascript</li>
+                            </ul>
+                        </div>
+                        <div class="project-details-links">
                             <a href="https://github.com/marie-bu/MarieBurki_4_10022021" target="blank"
                                 class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
                             <a href="https://marie-bu.github.io/MarieBurki_4_10022021/" target="blank"
-                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-switch">
-                        <img src="pictures/gameon.png" alt="" class="project-img">
-                        <div class="project-details">
-                            <ul class="project-details-skills ">
-                                <li class="btn-circle-xs icon-tools"><i class="fas fa-tools"></i></li>
-                                <li>Javascript</li>
-                            </ul>
-                            <p>Ce projet est la première approche de Javascript dans le parcours Front-end
-                                d'OpenClassrooms.
-                                L'objectif est d'apprivoiser le language en implémentant un formulaire d'inscription :
-                                ouverture et fermeture d'une modale, vérification de certains critères pour chaque
-                                input,
-                                apparition de messages d'erreur et de confirmation.</p>
+                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="ohmyfood project">
+                    <button class="btn-circle-portfolio btn-circle btn-circle-xs close-project"><i class="fas fa-times"></i></button>
                     <div class="project-main">
-                        <p class="h5 project-main-type">Projet OpenClassrooms</p>
                         <div class="project-main-title">
-                            <h4 class="h3">Oh My Food</h4>
+                            <h4 class="h1">Oh My Food</h4>
                             <h5>Dynamiser une page web avec des animations CSS</h5>
+                            <h5 class="light">Projet OpenClassrooms</h5>
                         </div>
-                        <div class="project-main-links">
-                            <button class="btn-circle-portfolio btn-circle btn-circle-xs btn-circle-more"><i
-                                    class="fas fa-ellipsis-v"></i></button>
-                            <a href="https://github.com/marie-bu/MarieBurki_3_12012021" target="blank"
-                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
-                            <a href="https://marie-bu.github.io/MarieBurki_3_12012021/" target="blank"
-                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-switch">
                         <img src="pictures/ohmyfood.png" alt="" class="project-img">
-                        <div class="project-details">
+                    </div>
+                    <div class="project-details">
+                        <p>Ce projet cible la mise en place d'effets et animations CSS graphiques avancés ainsi que
+                            l'apprentissage de Sass, pour un code CSS facilité et maintenable.<br>
+                            Par ailleurs, certaines animations sont à imaginer et à créer entièrement par l'étudiant
+                            et
+                            seule la maquette de la version mobile est fournie; c'est à l'étudiant de créer les
+                            versions
+                            tablette et desktop.
+                        </p>
+                        <div class="project-details-skills">
+                            <h5><i class="fas fa-tools"></i>Compétences</h5>
                             <ul class="project-details-skills ">
-                                <li class="btn-circle-xs icon-tools"><i class="fas fa-tools"></i></li>
                                 <li>CSS3</li>
                                 <li>Sass</li>
                                 <li>HTML5</li>
                                 <li>Responsive design</li>
                             </ul>
-                            <p>Ce projet cible la mise en place d'effets et animations CSS graphiques avancés ainsi que
-                                l'apprentissage de Sass, pour un code CSS facilité et maintenable.<br>
-                                Par ailleurs, certaines animations sont à imaginer et à créer entièrement par l'étudiant
-                                et
-                                seule la maquette de la version mobile est fournie; c'est à l'étudiant de créer les
-                                versions
-                                tablette et desktop.
-                            </p>
+                        </div>
+                        <div class="project-details-links">
+                            <a href="https://github.com/marie-bu/MarieBurki_3_12012021" target="blank"
+                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
+                            <a href="https://marie-bu.github.io/MarieBurki_3_12012021/" target="blank"
+                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="reservia project">
+                    <button class="btn-circle-portfolio btn-circle btn-circle-xs close-project"><i class="fas fa-times"></i></button>
                     <div class="project-main">
-                        <p class="h5 project-main-type">Projet OpenClassrooms</p>
                         <div class="project-main-title">
-                            <h4 class="h3">Reservia</h4>
+                            <h4 class="h1">Reservia</h4>
                             <h5>Transformer une maquette en site web</h5>
+                            <h5 class="light">Projet OpenClassrooms</h5>
                         </div>
-                        <div class="project-main-links">
-                            <button class="btn-circle-portfolio btn-circle btn-circle-xs btn-circle-more"><i
-                                    class="fas fa-ellipsis-v"></i></button>
-                            <a href="https://github.com/marie-bu/MarieBurki_2_20122020" target="blank"
-                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
-                            <a href="https://marie-bu.github.io/MarieBurki_2_20122020/" target="blank"
-                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-switch">
                         <img src="pictures/reservia.png" alt="" class="project-img">
-                        <div class="project-details">
-                            <ul class="project-details-skills">
-                                <li class="btn-circle-xs icon-tools"><i class="fas fa-tools"></i></li>
+                    </div>
+                    <div class="project-details">
+                        <p>L'objectif sur ce projet est d'intégrer une maquette responsive en HTML et en CSS, tout
+                            en se
+                            familiarisant avec la gestion de versions sur Git et GitHub.<br> La maquette pour la
+                            version
+                            tablette n'étant pas définie, c'est à l'étudiant de concevoir le design pour ce format.
+                        </p>
+                        <div class="project-details-skills">
+                            <h5><i class="fas fa-tools"></i>Compétences</h5>
+                            <ul>
                                 <li>CSS3</li>
                                 <li>HTML5</li>
                                 <li>Responsive design</li>
                             </ul>
-                            <p>L'objectif sur ce projet est d'intégrer une maquette responsive en HTML et en CSS, tout
-                                en se
-                                familiarisant avec la gestion de versions sur Git et GitHub.<br> La maquette pour la
-                                version
-                                tablette n'étant pas définie, c'est à l'étudiant de concevoir le design pour ce format.
-                            </p>
+                        </div>
+                        <div class="project-details-links">
+                            <a href="https://github.com/marie-bu/MarieBurki_2_20122020" target="blank"
+                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i class="fab fa-github"></i></a>
+                            <a href="https://marie-bu.github.io/MarieBurki_2_20122020/" target="blank"
+                                class="btn-circle-portfolio btn-circle btn-circle-xs"><i
+                                    class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -467,21 +498,29 @@
         </section>
 
         <section class="section" id="contact">
-            <p>Vous pouvez m'écrire à l'adresse mail suivante :<br>
-                <span class="bold">marie.buerki@gmail.com<a href="mailto:marie.buerki@gmail.com" target="_blank"
+            <div class="contact-content">
+                <h3>Envoyez-moi un mail</h3>
+                <div>
+                    <a href="mailto:marie.buerki@gmail.com" target="_blank"
                         class="btn-circle-contact btn-circle btn-circle-xs" id="send-mail"><i
-                            class="far fa-envelope"></i></a></span><br>
-                Ou me contacter via les plateformes ci-dessous :
-            </p>
-            <div class="contact-icons">
-                <a href="http://malt.fr/profile/marieb" target="_blank" class="btn-circle-contact btn-circle btn-circle-social"
-                    id="malt-btn">
-                    <img src="pictures/malt-dark.png" alt="" id="malt-dark">
-                    <img src="pictures/malt-light.png" alt="" id="malt-light"></a>
-                <a href="https://github.com/marie-bu" target="_blank" class="btn-circle-contact btn-circle btn-circle-social">
-                    <i class="fab fa-github"></i></a>
-                <a href="http://linkedin.com/in/marie-bu" target="blank" class="btn-circle-contact btn-circle btn-circle-social">
-                    <i class="fab fa-linkedin"></i></a>
+                        class="far fa-envelope"></i></a>
+                    <p>marie.buerki@gmail.com</p>
+                </div>
+                <h3>Contactez-moi via ces plateformes</h3>
+                <div class="contact-icons">
+                    <a href="http://malt.fr/profile/marieb" target="_blank"
+                        class="btn-circle-contact btn-circle btn-circle-social" id="malt-btn">
+                        <img src="pictures/malt-grey.png" alt="" id="malt-grey">
+                        <img src="pictures/malt-white.png" alt="" id="malt-white">
+                        <img src="pictures/malt-lightmode.png" alt="" id="malt-lightmode">
+                        <img src="pictures/malt-darkmode.png" alt="" id="malt-darkmode"></a>
+                    <a href="https://github.com/marie-bu" target="_blank"
+                        class="btn-circle-contact btn-circle btn-circle-social">
+                        <i class="fab fa-github"></i></a>
+                    <a href="http://linkedin.com/in/marie-bu" target="blank"
+                        class="btn-circle-contact btn-circle btn-circle-social">
+                        <i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </section>
     </main>

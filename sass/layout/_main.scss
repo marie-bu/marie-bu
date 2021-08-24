@@ -20,23 +20,11 @@ main {
         gap: 3rem;
         min-height: 100vh;
         height: max-content;
-        padding: 6rem 8rem;
-        margin-left: 6rem;
+        padding: 4rem 8rem 6rem 12rem;
         scroll-snap-align: start;
-        opacity: 0;
         transition: opacity $short-trans ease-in;
         @media screen and (max-width: 985px) {
-            padding: 8rem 2rem 3rem 2rem;
-            margin-left: 0;
-        }
-    }
-    &.active {
-        .section {
-            opacity: 1;
-            transition: opacity $middle-trans ease-in 850ms;
-            @include small-screens {
-                transition-delay: 100ms;
-            }
+            padding: 8rem 3rem 3rem 3rem;
         }
     }
 }

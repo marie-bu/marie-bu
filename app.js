@@ -5,23 +5,25 @@ const links = document.querySelectorAll("a");
 
 const lightModeSwitch = document.querySelector(".switch-mode");
 const root = document.querySelector(":root");
+const maltBtn = document.querySelector("#malt-btn");
 
 const header = document.querySelector("header");
-const navBtns = document.querySelectorAll(".btn-stripe-nav");
+const nav = document.querySelector("nav");
+const navBtns = nav.querySelectorAll(".btn-stripe");
 const returnHomeBtn = document.querySelector("#btn-return-home");
-const home = document.querySelector("#home");
-const homeBtns = home.querySelectorAll(".btn-stripe-home");
-const main = document.querySelector("main");
 const sections = document.querySelectorAll(".section");
-
 const burgerMenuBtn = document.querySelector("#btn-nav-mobile");
+
+const cv = document.querySelector("#modal-cv");
+const openCv = document.querySelector("#open-cv");
+const closeCv = document.querySelector("#close-cv");
 
 const careerTitles = document.querySelectorAll(".career-title");
 const careerTexts = document.querySelectorAll(".career-text");
 
-const projectsBtnsContainer = document.querySelector(".btns");
-const projectsBtns = projectsBtnsContainer.querySelectorAll("button");
-const btnsMore = document.querySelectorAll(".btn-circle-more");
+const projectModal = document.querySelector("#modal-project");
+const closeProject = document.querySelectorAll(".close-project");
+const projectsBtns = document.querySelectorAll("figcaption");
 const projects = document.querySelectorAll(".project");
 
 // buttons and links - focus blur
@@ -39,32 +41,41 @@ links.forEach(link => link.addEventListener("click", () => {
 lightModeSwitch.addEventListener("click", () => {
     lightModeSwitch.classList.toggle("dark-mode");
     root.classList.toggle("dark-mode");
+    maltBtn.classList.toggle("dark-mode");
 });
 
 // Navigation
 
-homeBtns.forEach((btn) => {
+navBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-        home.classList.add("narrowed");
         btn.classList.add("active");
-        main.classList.add("active");
         if (screen.width > 985) {
-            header.classList.add("narrowed");
+            header.classList.add("hidden");
+            nav.classList.add("narrow");
+            navBtns.forEach(btn => btn.classList.add("narrow"));
         }
         if (screen.width <= 985) {
             burgerMenuBtn.classList.remove("btn-close", "hidden");
+            nav.classList.add("hidden");
         }
     });
 });
 
 returnHomeBtn.addEventListener("click", () => {
-    home.classList.remove("narrowed");
-    homeBtns.forEach(btn => btn.classList.remove("active"));
-    header.classList.remove("narrowed");
-    main.classList.remove("active");
+    header.classList.remove("hidden");
+    nav.classList.remove("narrow");
+    navBtns.forEach(btn => btn.classList.remove("active", "narrow"));
 });
 
-// Change nav buttons' display when corresponding section on screen (works for scroll and for click)
+// Navigation small screens 
+
+burgerMenuBtn.addEventListener("click", () => {
+    burgerMenuBtn.classList.toggle("btn-close");
+    nav.classList.toggle("hidden");
+});
+
+
+// Change nav buttons' display when corresponding section on screen (added for scroll)
 
 let options = {
     root: null,
@@ -72,20 +83,20 @@ let options = {
     threshold: 0.25
 }
 
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(function (entries) {
     if (screen.width <= 985) {
         return
     } else {
-        entries.forEach(entry=> {
+        entries.forEach(entry => {
             if (!entry.isIntersecting) {
-                navBtns.forEach(btn=> {
+                navBtns.forEach(btn => {
                     if (btn.classList[1] === entry.target.id) {
                         btn.classList.remove("active");
                     }
                 });
             } else {
-                navBtns.forEach(btn=> {
-                    if (btn.classList[1] === entry.target.id) {
+                navBtns.forEach(btn => {
+                    if (btn.classList[1] === entry.target.id && nav.classList.contains("narrow")) {
                         btn.classList.add("active");
                     }
                 });
@@ -97,52 +108,53 @@ const observer = new IntersectionObserver(function(entries) {
 
 sections.forEach(section => observer.observe(section));
 
-// Navigation small screens 
+// Modal CV
 
-burgerMenuBtn.addEventListener("click", ()=> {
-    burgerMenuBtn.classList.toggle("btn-close");
-    home.classList.toggle("hidden");
-})
+openCv.addEventListener("click", () => {
+    cv.style.display = "block";
+});
 
-// Career 
+closeCv.addEventListener("click", () => {
+    cv.style.display = null;
+});
+
+// Change texts career 
 
 careerTitles.forEach((title) => {
     title.addEventListener("click", () => {
         careerTitles.forEach(t => t.classList.remove("active"));
         careerTexts.forEach((text) => {
             if (text.classList[0] === title.classList[0]) {
-                text.classList.remove("hidden");
+                text.classList.add("active");
                 title.classList.add("active");
             } else {
-                text.classList.add("hidden");
+                text.classList.remove("active");
             }
         });
     });
 });
 
-// Portfolio
+// Modal portfolio
 
 projectsBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-        projectsBtns.forEach(b => b.classList.remove("active"));
+        if (screen.width > 985) {
+            projectModal.style.display = "flex"; 
+        } else if (screen.width <= 985) {
+            projectModal.style.display = "block"; 
+        }
         projects.forEach((project) => {
             if (project.classList[0] === btn.classList[0]) {
                 project.classList.add("active");
-                btn.classList.add("active");
             } else {
                 project.classList.remove("active");
-                project.querySelector(".project-img").classList.remove("hidden");
-                project.querySelector(".btn-circle-more").classList.remove("active");
             }
         });
     });
 });
 
-btnsMore.forEach((btn) => {
+closeProject.forEach((btn) => {
     btn.addEventListener("click", () => {
-        let projectSwitch = btn.parentNode.parentNode.nextElementSibling;
-        let details = projectSwitch.querySelector(".project-details");
-        details.classList.toggle("active");
-        btn.classList.toggle("active");
+        projectModal.style.display = null;
     });
 });

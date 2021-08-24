@@ -1,23 +1,46 @@
 #career {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    @include small-screens {
-        gap: 1rem 2rem;
-    }
-}
-    
-.career {
-    &-title {
-        cursor: pointer;
-    }
-    &-text {
-        flex: 100%;
-        padding: 1rem;
-        order: 4;
-        &.hidden {
+    position: relative;
+    color: var(--career-text);
+    align-items: flex-start;
+    gap: 0;
+    .career {
+        &-title {
+            cursor: pointer;
+            max-width: 22%;
+            padding: 1rem 2rem 1rem 1.5rem;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            border-right: 0.1rem $career-middle solid;
+            &:hover, &:focus {
+                border-left: 0.3rem $career-middle solid;
+            }
+            &.active {
+                border-left: 0.3rem rgba($career-middle, 0.5) solid;
+            }
+            @include small-screens {
+                max-width: max-content;
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+        &-text {
             display: none;
+            position: absolute;
+            left: calc(22% + 8rem);
+            right: 6rem;
+            order: 4;
+            padding-left: 2rem;
+            &.active {
+                display: block;
+            }
+            @include small-screens {
+                position: relative;
+                left: 0;
+                right: 0;
+                padding-left: 0;
+                padding-top: 2rem;
+            }
         }
     }
 }
+    

@@ -1,0 +1,16 @@
+.modal-bg {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    height: 100%;
+    align-items: center;
+    padding: 6rem 8rem 6rem 14rem;
+    background-color: rgba($color: grey, $alpha: 0.3);
+    overflow: scroll;
+    scrollbar-width: none;
+    @include small-screens {
+        padding: 5rem 0 0 0;
+        align-items: initial;
+    }
+}

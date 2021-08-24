@@ -1,0 +1,13 @@
+#refer {
+    color: var(--refer-text);
+    h3, h4 {
+        text-align: center;
+    }
+    #refer-link {
+        padding: 2rem;
+        border-top: 0.1rem $refer-dark solid;
+        a {
+            margin-left: 0.5rem;
+        }
+    }
+}

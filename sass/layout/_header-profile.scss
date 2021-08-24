@@ -1,0 +1,56 @@
+header {
+    position: absolute;
+    z-index: 3;
+    top: 0; left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    transition: transform 250ms ease-in 160ms;
+    @include small-screens {
+        height: 5rem;
+        min-height: max-content;
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 17rem;
+        padding: 2rem 1rem;
+        margin: 2rem 0 4rem 2rem;
+        background-color: var(--middle-grey);
+        color: var(--text-grey);
+        border-radius: 0.3rem;
+        @include box-shadow;
+        img {
+            width: 13rem;
+            height: 13rem;
+            border-radius: 50%;
+            @include box-shadow;
+            margin-bottom: 1rem;
+        }
+        @include small-screens {
+            position: relative;
+            width: 100vw;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: 0 1rem;
+            margin: 0;
+            img {
+                width: 5rem;
+                height: 5rem;
+                margin-bottom: 0;
+                margin-left: -2.3rem;
+            }
+            .profile-contact {
+                display: none;
+            }
+        }
+    }
+    &.hidden {
+        transform: translateX(-120%);
+        transition: transform 250ms ease-in 350ms;
+    }
+}

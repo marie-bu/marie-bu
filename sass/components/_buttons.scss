@@ -3,38 +3,49 @@
 .btn-stripe {
     @include btn;
     font-size: 1.2rem;
-    &-home {
-        height: 100%;
-        max-height: 7rem;
-        @include small-screens {
-            max-height: none;
-        }
+    height: 100%;
+    max-height: 7rem;
+    transition: color 50ms ease 0ms;
+    i {
+        display: none;
     }
-    &-nav {
-        height: 3rem;
+    @include small-screens {
+        max-height: none;
+    }
+    &.narrow {
+        height: 50%;
+        max-height: 3rem;
+        transition: color 50ms ease 0ms;
+        transition: max-height 450ms ease;
+        span {
+            display: none;
+        }
+        i {
+            display: inline-block;
+        }
     }
     &-cv {
         @include stripe-btn-color($cv-middle, $cv-dark, $cv-light, 2deg);
     }
     &-career {
         @include stripe-btn-color($career-middle, $career-dark, $career-light, -2deg);
-        animation-delay: 450ms;
+        animation-delay: 150ms;
     }
     &-refer {
         @include stripe-btn-color($refer-middle, $refer-dark, $refer-light, -2deg);
-        animation-delay: 550ms;
+        animation-delay: 250ms;
     }
     &-skills {
         @include stripe-btn-color($skills-middle, $skills-dark, $skills-light, 2deg);
-        animation-delay: 650ms;
+        animation-delay: 350ms;
     }
     &-portfolio {
         @include stripe-btn-color($portfolio-middle, $portfolio-dark, $portfolio-light, 2deg);
-        animation-delay: 750ms;
+        animation-delay: 450ms;
     }
     &-contact {
         @include stripe-btn-color($contact-middle, $contact-dark, $contact-light, -2deg);
-        animation-delay: 850ms;
+        animation-delay: 550ms;
     }
 }
 
@@ -42,25 +53,26 @@
     @include btn;
     @include box-shadow;
     &-cv {
-        @include btn-circle-color($cv-dark, $cv-light);
+        @include btn-circle-color(var(--cv-text), var(--bg-grey));
     }
     &-career {
-        @include btn-circle-color($career-dark, $career-light);
+        @include btn-circle-color(var(--career-text), var(--bg-grey));
     }
     &-refer {
-        @include btn-circle-color($refer-dark , $refer-light);
+        @include btn-circle-color(var(--refer-text), var(--bg-grey));
     }
     &-portfolio {
-        @include btn-circle-color($portfolio-dark, $portfolio-light);
+        @include btn-circle-color(var(--portfolio-text), var(--bg-grey));
     }
     &-contact {
-        @include btn-circle-color($contact-dark, $contact-light);
+        @include btn-circle-color(var(--contact-text), var(--bg-grey));
     }
     &-home {
-        @include btn-circle-color(var(--bg-grey), var(--text-grey));
+        color: var(--text-grey);
         box-shadow: none;
         &:hover, &:focus {
-            box-shadow: none;
+            background-color: var(--text-grey);
+            color: var(--middle-grey);
         }
     }
     &-l {
@@ -108,23 +120,49 @@
 }
 
 .btn-circle-social {
-    @include circle(5rem, 2.5rem);
+    @include circle(2rem, 1rem);
+    padding: none;
     img {
-        @include circle(2.5rem, 1rem);
+        @include circle(1rem, 0.5rem);
     }
-    #malt-dark {
+    #malt-white {
+        display: inline-block;
+    }
+    #malt-grey, #malt-darkmode, #malt-lightmode {
         display: none;
     }
     &:hover, &:focus {
-        #malt-light {
+        #malt-white {
             display: none;
         }
-        #malt-dark {
+        #malt-lightmode {
             display: inline-block;
+        }
+    }
+    &.dark-mode {
+        #malt-grey {
+            display: inline-block;
+        }
+        #malt-white, #malt-darkmode, #malt-lightmode {
+            display: none;
+        }
+        &:hover, &:focus {
+            #malt-grey {
+                display: none;
+            }
+            #malt-darkmode {
+                display: inline-block;
+            }
         }
     }
 }
 
-#send-mail {
-    margin-left: 1.5rem;
+#close-cv, .close-project {
+    position: absolute;
+    top: -0.9rem;
+    right: -0.9rem;
+    @include small-screens {
+        top: 1rem;
+        right: 1rem;
+    }
 }

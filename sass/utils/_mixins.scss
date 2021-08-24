@@ -36,8 +36,7 @@
     box-shadow: inset 1px 1px 15px rgba($color: darken($outer, 15%), $alpha: 0.4),
     inset -2px -1px 40px rgba($color: darken($outer, 5%), $alpha: 0.6);
     transform: rotate($angle);
-    transition: transform 300ms;
-    animation: appear-opacity 80ms ease-in 350ms backwards;
+    transition: transform 300ms ease-in;
     &:hover, &:focus, &.active {
         transform: rotate(0);
         box-shadow: inset 1px 1px 15px rgba($color: darken($outer, 17%), $alpha: 0.8),

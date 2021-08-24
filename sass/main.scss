@@ -1,6 +1,5 @@
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/keyframes";
 
 @import "./base/base";
 @import "./base/typography";
@@ -8,11 +7,17 @@
 @import "./components/buttons";
 @import "./components/switch-mode";
 
-@import "./layout/header";
+@import "./layout/header-profile";
+@import "./layout/nav";
 @import "./layout/main";
-@import "./layout/home";
-@import "./layout/sections/cv";
+
+@import "./layout/sections/profile";
 @import "./layout/sections/career";
+@import "./layout/sections/refer";
 @import "./layout/sections/skills";
 @import "./layout/sections/portfolio";
 @import "./layout/sections/contact";
+
+@import "./layout/modales/modales";
+@import "./layout/modales/modal-cv";
+@import "./layout/modales/modal-project";

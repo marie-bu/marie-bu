@@ -1,7 +1,11 @@
 #skills {
+    color: var(--skills-text);
     i {
-        padding: 0 5px;
+        padding: 0 0.5rem;
         color: $skills-dark;
+    }
+    h3 {
+        text-align: center;
     }
     p {
         display: inline-flex;
@@ -13,7 +17,7 @@
         flex-wrap: wrap;
         gap: 0.6rem;
         max-height: 8rem;
-        width: 80%;
+        width: 85%;
         margin-top: 2rem;
         @include small-screens {
             width: 100%;

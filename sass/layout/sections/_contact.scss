@@ -1,5 +1,31 @@
-.contact-icons {
-display: flex;
-flex-direction: row;
-gap: 3rem;
+#contact {
+    color: var(--contact-text);
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        width: min-content;
+        @include small-screens {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+        h3 {
+            margin: auto 0;
+            text-align: center;
+        }
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            padding: 2rem;
+            border-left: 0.1rem $contact-dark solid;
+            @include small-screens {
+                border-left: none;
+                justify-content: center;
+            }
+        }
+    }
 }

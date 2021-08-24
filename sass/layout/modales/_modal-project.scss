@@ -1,0 +1,72 @@
+.project {
+    position: relative;
+    display: none;
+    padding: 2rem;
+    background-color: var(--bg-grey);
+    @include box-shadow;
+    @include small-screens {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    &-main {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        height: min-content;
+        width: 42%;
+        padding-right: 2rem;
+        border-right: 0.1rem $portfolio-dark solid;
+        img {
+            width: 100%;
+            border-radius: 0.5rem;
+            @include box-shadow;
+        }
+        @include small-screens {
+            width: 100%;
+            padding-right: 0;
+            border-right: none;
+        }
+    }
+    &-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        width: 58%;
+        padding-left: 2rem;
+        @include small-screens {
+            width: 100%;
+            padding-left: 0;
+            gap: 2rem;
+        }
+        &-skills {
+            h5 {
+                width: max-content;
+                margin: auto;
+                padding-bottom: 0.5rem;
+                border-bottom: 0.1rem $portfolio-dark solid;
+                margin-bottom: 1rem;
+                i {
+                    padding-right: 0.5rem;
+                }
+            }
+            ul {
+                max-height: 5rem;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+        }
+        &-links {
+            display: flex;
+            gap: 1rem;
+            align-self: center;
+            width: min-content;
+            padding: 1rem 1rem 0 1rem;
+            border-top: 0.1rem $portfolio-dark solid;
+        }
+    }
+    &.active {
+        display: flex;
+    }
+}

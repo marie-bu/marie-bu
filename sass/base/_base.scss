@@ -5,18 +5,30 @@
 }
 
 :root {
-    --text-grey: #403F4C;
-    --middle-grey: #dcdee1;
+    --text-grey: #303039;
+    --middle-grey: #F3F4F6;
     --bg-grey: #EEF0F2;
+    --cv-text: #0F516B;
+    --career-text: #005241;
+    --refer-text: #005C31;
+    --skills-text: #774D04;
+    --portfolio-text: #8F3C00;
+    --contact-text: #913012;
     &.dark-mode {
         --text-grey: #EEF0F2;
-        --middle-grey: #53525d;
-        --bg-grey: #403F4C;
+        --middle-grey: #403F4C;
+        --bg-grey: #303039;
+        --cv-text: #B8E3F5;
+        --career-text: #ADFFE7;
+        --refer-text: #ADFFD2;
+        --skills-text: #FCE0B0;
+        --portfolio-text: #FDD2AF;
+        --contact-text: #F6BEB6;
     }
 }
 
 html {
-    background-color: var(--middle-grey);
+    background-color: var(--bg-grey);
     overflow: hidden;
     @media screen and (max-width: 400px) {
         font-size: 12px;
@@ -60,5 +72,6 @@ a {
 
 button {
     border: none;
+    background: none;
     cursor: pointer;
 }
