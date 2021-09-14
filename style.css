@@ -139,10 +139,12 @@ h5, .h5 {
   font-weight: 300;
 }
 
+.cv-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
 .cv-content h3 {
-  font-size: 2.6rem;
-  text-align: center;
-  text-transform: uppercase;
+  font-size: 1.7rem;
 }
 .cv-content h4 {
   text-transform: uppercase;
@@ -901,14 +903,26 @@ main .section {
 .cv-content-top {
   height: 27rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  gap: 1rem;
 }
 @media screen and (max-width: 985px) {
   .cv-content-top {
     min-height: 27rem;
     height: max-content;
   }
+}
+.cv-content-top-links {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.cv-content-top p {
+  line-height: 2rem;
+}
+.cv-content-top p i {
+  padding-right: 1rem;
 }
 .cv-content-left {
   display: flex;
@@ -920,7 +934,7 @@ main .section {
   padding: 2rem 3rem 8rem 3rem;
 }
 .cv-content-left img {
-  width: 100%;
+  width: 80%;
   border-radius: 50%;
   box-shadow: 1px 1px 3px #1d1c22;
 }
@@ -939,6 +953,9 @@ main .section {
   .cv-content-left {
     width: 100%;
   }
+}
+.cv-content-left .cv-content-top {
+  align-items: center;
 }
 .cv-content-right {
   display: flex;

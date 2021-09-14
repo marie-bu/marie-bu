@@ -10,11 +10,23 @@
     &-top {
         height: 27rem;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        gap: 1rem;
         @include small-screens {
             min-height: 27rem;
             height: max-content;
+        }
+        &-links {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        p {
+            line-height: 2rem;
+            i {
+                padding-right: 1rem;
+            }
         }
     }
     &-left {
@@ -26,7 +38,7 @@
         color: var(--bg-grey);
         padding: 2rem 3rem 8rem 3rem;
         img {
-            width: 100%;
+            width: 80%;
             border-radius: 50%;
             @include box-shadow;
             @include small-screens {
@@ -41,6 +53,9 @@
         }
         @include small-screens {
             width: 100%;
+        }
+        .cv-content-top {
+            align-items: center;
         }
     }
     &-right {
