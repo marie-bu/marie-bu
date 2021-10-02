@@ -733,6 +733,9 @@ main .section {
   order: 4;
   padding-left: 2rem;
 }
+#career .career-text p {
+  margin-bottom: 0.7rem;
+}
 #career .career-text.active {
   display: block;
 }
@@ -817,6 +820,7 @@ main .section {
   padding: 2rem 1rem 1.5rem 1rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  text-align: center;
   cursor: pointer;
 }
 #portfolio .btns figcaption img {

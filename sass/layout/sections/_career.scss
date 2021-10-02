@@ -30,6 +30,9 @@
             right: 6rem;
             order: 4;
             padding-left: 2rem;
+            p {
+                margin-bottom: 0.7rem;
+            }
             &.active {
                 display: block;
             }
