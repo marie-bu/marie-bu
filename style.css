@@ -449,33 +449,30 @@ h5, .h5 {
   padding: none;
 }
 .btn-circle-social img {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  font-size: 0.5rem;
+  width: 1.5rem;
 }
-.btn-circle-social #malt-white {
+.btn-circle-social #w3d-white {
   display: inline-block;
 }
-.btn-circle-social #malt-grey, .btn-circle-social #malt-darkmode, .btn-circle-social #malt-lightmode {
+.btn-circle-social #w3d-grey, .btn-circle-social #w3d-darkmode, .btn-circle-social #w3d-lightmode {
   display: none;
 }
-.btn-circle-social:hover #malt-white, .btn-circle-social:focus #malt-white {
+.btn-circle-social:hover #w3d-white, .btn-circle-social:focus #w3d-white {
   display: none;
 }
-.btn-circle-social:hover #malt-lightmode, .btn-circle-social:focus #malt-lightmode {
+.btn-circle-social:hover #w3d-lightmode, .btn-circle-social:focus #w3d-lightmode {
   display: inline-block;
 }
-.btn-circle-social.dark-mode #malt-grey {
+.btn-circle-social.dark-mode #w3d-grey {
   display: inline-block;
 }
-.btn-circle-social.dark-mode #malt-white, .btn-circle-social.dark-mode #malt-darkmode, .btn-circle-social.dark-mode #malt-lightmode {
+.btn-circle-social.dark-mode #w3d-white, .btn-circle-social.dark-mode #w3d-darkmode, .btn-circle-social.dark-mode #w3d-lightmode {
   display: none;
 }
-.btn-circle-social.dark-mode:hover #malt-grey, .btn-circle-social.dark-mode:focus #malt-grey {
+.btn-circle-social.dark-mode:hover #w3d-grey, .btn-circle-social.dark-mode:focus #w3d-grey {
   display: none;
 }
-.btn-circle-social.dark-mode:hover #malt-darkmode, .btn-circle-social.dark-mode:focus #malt-darkmode {
+.btn-circle-social.dark-mode:hover #w3d-darkmode, .btn-circle-social.dark-mode:focus #w3d-darkmode {
   display: inline-block;
 }
 

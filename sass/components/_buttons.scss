@@ -123,34 +123,34 @@
     @include circle(2rem, 1rem);
     padding: none;
     img {
-        @include circle(1rem, 0.5rem);
+        width: 1.5rem;
     }
-    #malt-white {
+    #w3d-white {
         display: inline-block;
     }
-    #malt-grey, #malt-darkmode, #malt-lightmode {
+    #w3d-grey, #w3d-darkmode, #w3d-lightmode {
         display: none;
     }
     &:hover, &:focus {
-        #malt-white {
+        #w3d-white {
             display: none;
         }
-        #malt-lightmode {
+        #w3d-lightmode {
             display: inline-block;
         }
     }
     &.dark-mode {
-        #malt-grey {
+        #w3d-grey {
             display: inline-block;
         }
-        #malt-white, #malt-darkmode, #malt-lightmode {
+        #w3d-white, #w3d-darkmode, #w3d-lightmode {
             display: none;
         }
         &:hover, &:focus {
-            #malt-grey {
+            #w3d-grey {
                 display: none;
             }
-            #malt-darkmode {
+            #w3d-darkmode {
                 display: inline-block;
             }
         }
