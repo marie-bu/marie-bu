@@ -11,6 +11,7 @@
             border-top-left-radius: 0.5rem;
             border-bottom-left-radius: 0.5rem;
             border-right: 0.1rem $career-middle solid;
+            border-left: 0.3rem transparent solid;
             &:hover, &:focus {
                 border-left: 0.3rem $career-middle solid;
             }

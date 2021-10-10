@@ -1,28 +1,44 @@
 #skills {
     color: var(--skills-text);
-    i {
-        padding: 0 0.5rem;
-        color: $skills-dark;
-    }
-    h3 {
-        text-align: center;
-    }
-    p {
-        display: inline-flex;
-        gap: 3rem;
-    }
-    ul {
+    .skills-groups {
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        max-height: 8rem;
-        width: 85%;
-        margin-top: 2rem;
-        @include small-screens {
-            width: 100%;
-            max-height: none;
-            align-content: center;
+        gap: 4rem;
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+            &#groupJS {
+                grid-template-columns: 1fr;
+            }
+        }
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 8rem;
+            span {
+                padding: 0.5rem;
+                border-top: 2px $skills-middle solid;
+                font-size: 1.5rem;
+                color: $skills-middle;
+            }
+        }
+    }
+    .skills-more {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px $skills-middle solid;
+        cursor: pointer;
+    }
+    .skills-to-come {
+        display: flex;
+        gap: 1rem;
+        margin-top: -2rem;
+        opacity: 0;
+        transition: 250ms ease;
+        &.active {
+            opacity: 1;
         }
     }
 }

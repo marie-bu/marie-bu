@@ -158,3 +158,36 @@ closeProject.forEach((btn) => {
         projectModal.style.display = null;
     });
 });
+
+// Skills
+
+const skillsPercentages = document.querySelectorAll('.skills-groups li span');
+
+skillsPercentages.forEach((skill)=>{
+
+    let percentage = skill.className;
+    let count = 0;
+    let runNumbers = setInterval(counting, 20);
+
+    function counting() {
+        if (count == percentage) {
+            clearInterval(runNumbers);
+        } else {
+            count+=1;
+            skill.innerHTML=count+'%';
+        }
+    }
+});
+
+const skillsMore = document.querySelector(".skills-more");
+const skillsToCome = document.querySelector(".skills-to-come");
+
+skillsMore.addEventListener("mouseover", ()=>{
+    skillsToCome.classList.add("active");
+});
+skillsMore.addEventListener("mouseout", ()=>{
+    skillsToCome.classList.remove("active");
+});
+skillsMore.addEventListener("click", ()=>{
+    skillsToCome.classList.toggle("active");
+});

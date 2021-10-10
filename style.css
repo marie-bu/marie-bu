@@ -708,6 +708,7 @@ main .section {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   border-right: 0.1rem #00CCAD solid;
+  border-left: 0.3rem transparent solid;
 }
 #career .career-title:hover, #career .career-title:focus {
   border-left: 0.3rem #00CCAD solid;
@@ -763,32 +764,46 @@ main .section {
 #skills {
   color: var(--skills-text);
 }
-#skills i {
-  padding: 0 0.5rem;
-  color: #DB9E06;
-}
-#skills h3 {
-  text-align: center;
-}
-#skills p {
-  display: inline-flex;
-  gap: 3rem;
-}
-#skills ul {
+#skills .skills-groups {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  max-height: 8rem;
-  width: 85%;
+  gap: 4rem;
+}
+#skills .skills-groups ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   margin-top: 2rem;
 }
-@media screen and (max-width: 985px) {
-  #skills ul {
-    width: 100%;
-    max-height: none;
-    align-content: center;
-  }
+#skills .skills-groups ul#groupJS {
+  grid-template-columns: 1fr;
+}
+#skills .skills-groups li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 8rem;
+}
+#skills .skills-groups li span {
+  padding: 0.5rem;
+  border-top: 2px #EDC55A solid;
+  font-size: 1.5rem;
+  color: #EDC55A;
+}
+#skills .skills-more {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px #EDC55A solid;
+  cursor: pointer;
+}
+#skills .skills-to-come {
+  display: flex;
+  gap: 1rem;
+  margin-top: -2rem;
+  opacity: 0;
+  transition: 250ms ease;
+}
+#skills .skills-to-come.active {
+  opacity: 1;
 }
 
 #portfolio {
@@ -817,6 +832,7 @@ main .section {
   padding: 2rem 1rem 1.5rem 1rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  border-top: 0.3rem transparent solid;
   text-align: center;
   cursor: pointer;
 }
@@ -832,6 +848,9 @@ main .section {
 }
 #portfolio .btns figcaption:hover, #portfolio .btns figcaption:focus {
   border-top: 0.3rem #CC5500 solid;
+}
+#portfolio .btns figcaption:hover img, #portfolio .btns figcaption:focus img {
+  box-shadow: 3px 3px 9px #1d1c22;
 }
 
 #contact {
