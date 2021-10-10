@@ -37,6 +37,9 @@
         margin-top: -2rem;
         opacity: 0;
         transition: 250ms ease;
+        li {
+            text-align: center;
+        }
         &.active {
             opacity: 1;
         }

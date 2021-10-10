@@ -642,6 +642,11 @@ main .section {
   height: max-content;
   padding: 4rem 8rem 6rem 12rem;
   scroll-snap-align: start;
+  opacity: 0;
+  transition: 350ms ease-in;
+}
+main .section.active {
+  opacity: 1;
 }
 @media screen and (max-width: 985px) {
   main .section {
@@ -801,6 +806,9 @@ main .section {
   margin-top: -2rem;
   opacity: 0;
   transition: 250ms ease;
+}
+#skills .skills-to-come li {
+  text-align: center;
 }
 #skills .skills-to-come.active {
   opacity: 1;

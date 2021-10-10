@@ -80,7 +80,7 @@ burgerMenuBtn.addEventListener("click", () => {
 let options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.25
+    threshold: 0.5
 }
 
 const observer = new IntersectionObserver(function (entries) {
@@ -89,12 +89,14 @@ const observer = new IntersectionObserver(function (entries) {
     } else {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
+                entry.target.classList.remove("active");
                 navBtns.forEach(btn => {
                     if (btn.classList[1] === entry.target.id) {
                         btn.classList.remove("active");
                     }
                 });
             } else {
+                entry.target.classList.add("active");
                 navBtns.forEach(btn => {
                     if (btn.classList[1] === entry.target.id && nav.classList.contains("narrow")) {
                         btn.classList.add("active");
@@ -162,22 +164,25 @@ closeProject.forEach((btn) => {
 // Skills
 
 const skillsPercentages = document.querySelectorAll('.skills-groups li span');
+const skillsSection = document.querySelector("#skills");
 
 skillsPercentages.forEach((skill)=>{
 
     let percentage = skill.className;
     let count = 0;
+
     let runNumbers = setInterval(counting, 20);
 
     function counting() {
         if (count == percentage) {
             clearInterval(runNumbers);
-        } else {
+        } else if (count<percentage && skillsSection.className=="section active") {
             count+=1;
             skill.innerHTML=count+'%';
         }
     }
 });
+
 
 const skillsMore = document.querySelector(".skills-more");
 const skillsToCome = document.querySelector(".skills-to-come");
