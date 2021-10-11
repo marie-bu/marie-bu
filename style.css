@@ -1,4 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Krub:wght@200;300;400;500;600;700&family=Oxygen:wght@300;400;700&display=swap");
+@keyframes interactive {
+  0% {
+    transform: scaleX(100%) scaleY(100%);
+  }
+  15% {
+    transform: scaleX(105%) scaleY(100%);
+  }
+  30% {
+    transform: scaleX(110%) scaleY(100%);
+  }
+  65% {
+    transform: scaleX(110%) scaleY(100%);
+  }
+  70% {
+    transform: scaleX(100%) scaleY(110%);
+  }
+  75% {
+    transform: scaleX(100%) scaleY(100%);
+  }
+  78% {
+    transform: scaleX(100%) scaleY(105%);
+  }
+  81% {
+    transform: scaleX(100%) scaleY(100%);
+  }
+  100% {
+    transform: scaleX(100%) scaleY(100%);
+  }
+}
+@keyframes interactive-text {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-0.5rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -488,6 +528,21 @@ h5, .h5 {
   }
 }
 
+.interactive {
+  animation: interactive 2000ms ease infinite;
+}
+
+.interactive-text {
+  position: relative;
+  animation: interactive-text 1500ms ease infinite;
+}
+.interactive-text-1 {
+  animation-delay: 150ms;
+}
+.interactive-text-2 {
+  animation-delay: 300ms;
+}
+
 .switch-mode {
   position: absolute;
   z-index: 3;
@@ -773,6 +828,11 @@ main .section.active {
   display: flex;
   gap: 4rem;
 }
+@media screen and (max-width: 985px) {
+  #skills .skills-groups {
+    flex-direction: column;
+  }
+}
 #skills .skills-groups ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -788,11 +848,26 @@ main .section.active {
   gap: 0.5rem;
   width: 8rem;
 }
+#skills .skills-groups li i {
+  height: 4px;
+  background-color: #EDC55A;
+}
 #skills .skills-groups li span {
-  padding: 0.5rem;
-  border-top: 2px #EDC55A solid;
+  position: relative;
   font-size: 1.5rem;
   color: #EDC55A;
+  width: 100px;
+}
+#skills .skills-groups li span::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: calc(-0.5rem - 4px);
+  height: 4px;
+  width: 100px;
+  background-color: #EDC55A;
+  opacity: 0.3;
 }
 #skills .skills-more {
   padding: 1rem;
@@ -809,6 +884,11 @@ main .section.active {
 }
 #skills .skills-to-come li {
   text-align: center;
+}
+@media screen and (max-width: 985px) {
+  #skills .skills-to-come {
+    flex-direction: column;
+  }
 }
 #skills .skills-to-come.active {
   opacity: 1;

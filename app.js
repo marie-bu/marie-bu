@@ -85,6 +85,7 @@ let options = {
 
 const observer = new IntersectionObserver(function (entries) {
     if (screen.width <= 985) {
+        sections.forEach(section => section.classList.add("active"));
         return
     } else {
         entries.forEach(entry => {
@@ -179,6 +180,7 @@ skillsPercentages.forEach((skill)=>{
         } else if (count<percentage && skillsSection.className=="section active") {
             count+=1;
             skill.innerHTML=count+'%';
+            skill.previousElementSibling.style.width=count+"px";
         }
     }
 });

@@ -1,0 +1,41 @@
+@keyframes interactive {
+    0% {
+        transform: scaleX(100%) scaleY(100%);
+    }
+    15% {
+        transform: scaleX(105%) scaleY(100%);
+    }
+    30% {
+        transform: scaleX(110%) scaleY(100%);
+    }
+    65% {
+        transform: scaleX(110%) scaleY(100%);
+    }
+    70% {
+        transform: scaleX(100%) scaleY(110%);
+    }
+    75% {
+        transform: scaleX(100%) scaleY(100%);
+    }
+    78% {
+        transform: scaleX(100%) scaleY(105%);
+    }
+    81% {
+        transform: scaleX(100%) scaleY(100%);
+    }
+    100% {
+        transform: scaleX(100%) scaleY(100%);
+    }
+}
+
+@keyframes interactive-text {
+    0% {
+        transform: translateX(0)
+    }
+    50% {
+        transform: translateX(-0.5rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

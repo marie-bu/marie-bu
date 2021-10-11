@@ -166,3 +166,18 @@
         right: 1rem;
     }
 }
+
+.interactive {
+    animation: interactive 2000ms ease infinite;
+}
+
+.interactive-text {
+    position: relative;
+    &-1 {
+        animation-delay: 150ms;
+    }
+    &-2 {
+        animation-delay: 300ms;
+    }
+    animation: interactive-text 1500ms ease infinite;
+}

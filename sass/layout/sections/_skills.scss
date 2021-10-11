@@ -3,6 +3,9 @@
     .skills-groups {
         display: flex;
         gap: 4rem;
+        @include small-screens {
+            flex-direction: column;
+        }
         ul {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -17,11 +20,26 @@
             flex-direction: column;
             gap: 0.5rem;
             width: 8rem;
+            i {
+                height: 4px;
+                background-color: $skills-middle;
+            }
             span {
-                padding: 0.5rem;
-                border-top: 2px $skills-middle solid;
+                position: relative;
                 font-size: 1.5rem;
                 color: $skills-middle;
+                width: 100px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    top: calc(-0.5rem - 4px);
+                    height: 4px;
+                    width: 100px;
+                    background-color: $skills-middle;
+                    opacity: 0.3;
+                }
             }
         }
     }
@@ -39,6 +57,9 @@
         transition: 250ms ease;
         li {
             text-align: center;
+        }
+        @include small-screens {
+            flex-direction: column;
         }
         &.active {
             opacity: 1;
