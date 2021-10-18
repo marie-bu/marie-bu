@@ -84,28 +84,27 @@ let options = {
 }
 
 const observer = new IntersectionObserver(function (entries) {
-    if (screen.width <= 985) {
-        sections.forEach(section => section.classList.add("active"));
-        return
-    } else {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                entry.target.classList.remove("active");
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            entry.target.classList.remove("active");
+            if (screen.width > 985) {
                 navBtns.forEach(btn => {
                     if (btn.classList[1] === entry.target.id) {
                         btn.classList.remove("active");
                     }
                 });
-            } else {
-                entry.target.classList.add("active");
+            }
+        } else {
+            entry.target.classList.add("active");
+            if (screen.width > 985) {  
                 navBtns.forEach(btn => {
                     if (btn.classList[1] === entry.target.id && nav.classList.contains("narrow")) {
                         btn.classList.add("active");
                     }
                 });
             }
-        });
-    }
+        }
+    });
 }, options);
 
 
