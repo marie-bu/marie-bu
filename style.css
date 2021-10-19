@@ -706,6 +706,7 @@ main .section.active {
 @media screen and (max-width: 985px) {
   main .section {
     padding: 8rem 3rem 3rem 3rem;
+    opacity: 1;
   }
 }
 
@@ -1146,6 +1147,7 @@ main .section.active {
   flex-wrap: wrap;
 }
 .project-details-links {
+  position: relative;
   display: flex;
   gap: 1rem;
   align-self: center;
@@ -1155,6 +1157,24 @@ main .section.active {
 }
 .project.active {
   display: flex;
+}
+
+#code-cover-letter {
+  position: relative;
+}
+#code-cover-letter::after {
+  position: absolute;
+  content: "code : toc toc";
+  right: -6.5rem;
+  top: 0.6rem;
+  width: max-content;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+@media screen and (max-width: 985px) {
+  #code-cover-letter::after {
+    color: var(--portfolio-text);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

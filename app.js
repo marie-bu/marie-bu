@@ -53,8 +53,7 @@ navBtns.forEach((btn) => {
             header.classList.add("hidden");
             nav.classList.add("narrow");
             navBtns.forEach(btn => btn.classList.add("narrow"));
-        }
-        if (screen.width <= 985) {
+        } else if (screen.width <= 985) {
             burgerMenuBtn.classList.remove("btn-close", "hidden");
             nav.classList.add("hidden");
         }
@@ -80,7 +79,7 @@ burgerMenuBtn.addEventListener("click", () => {
 let options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5
+    threshold: 0.2
 }
 
 const observer = new IntersectionObserver(function (entries) {
@@ -120,6 +119,12 @@ closeCv.addEventListener("click", () => {
     cv.style.display = null;
 });
 
+cv.addEventListener("click", (el)=>{
+    if (el.target.id == "modal-cv") {
+        cv.style.display = null;
+    }
+});
+
 // Change texts career 
 
 careerTitles.forEach((title) => {
@@ -153,6 +158,12 @@ projectsBtns.forEach((btn) => {
             }
         });
     });
+});
+
+projectModal.addEventListener("click", (el)=>{
+    if (el.target.id == "modal-project") {
+        projectModal.style.display = null;
+    }
 });
 
 closeProject.forEach((btn) => {

@@ -58,6 +58,7 @@
             }
         }
         &-links {
+            position: relative;
             display: flex;
             gap: 1rem;
             align-self: center;
@@ -68,5 +69,21 @@
     }
     &.active {
         display: flex;
+    }
+}
+
+#code-cover-letter {
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "code : toc toc";
+        right: -6.5rem;
+        top: 0.6rem;
+        width: max-content;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        @include small-screens {
+            color: var(--portfolio-text);
+        }
     }
 }
