@@ -8,46 +8,50 @@
         flex-direction: column;
     }
     &-top {
-        height: 27rem;
+        height: 18rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 1rem;
+        border-bottom: 1px $cv-middle solid;
         @include small-screens {
-            min-height: 27rem;
+            min-height: 18rem;
             height: max-content;
-        }
-        &-links {
-            display: flex;
-            gap: 1rem;
-            padding: 1rem;
-        }
-        p {
-            line-height: 2rem;
-            i {
-                padding-right: 1rem;
-            }
         }
     }
     &-left {
         display: flex;
         flex-direction: column;
-        gap: 2.5rem;
+        gap: 2rem;
         width: 35%;
         background-color:var(--cv-text);
         color: var(--bg-grey);
-        padding: 2rem 3rem 8rem 3rem;
+        padding: 4rem 3rem 3rem 3rem;
         img {
-            width: 80%;
+            width: 90%;
             border-radius: 50%;
             @include box-shadow;
             @include small-screens {
                 max-width: 400px;
             }
         }
+        &-contact {
+            display: flex;
+            width: 85%;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            a {
+                background-color: var(--bg-grey);
+                color: var(--cv-text);
+            }
+            a:hover, a:focus {
+                background-color: var(--cv-text);
+                color: var(--bg-grey);
+            }
+        }
         p {
         display: flex;
-        gap: 1rem;
+        gap: 0.8rem;
         align-items: center;
         white-space: nowrap;
         }
@@ -64,7 +68,7 @@
         background-color: var(--bg-grey);
         color:var(--cv-text);
         gap: 2rem;
-        padding: 2rem 3rem 8rem 3rem;
+        padding: 4rem 4rem 3rem 3rem;
     }
     h4 {
         padding-bottom: 2rem;
