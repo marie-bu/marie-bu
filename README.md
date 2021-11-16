@@ -1,6 +1,6 @@
 - 👋 Hi, I'm Marie
-- 👀 I’m interested in web and ecology
-- 🌱 I’m currently deepening my knowledge of Javascript
+- 👀 I’m interested in front-end coding and UX design
+- 🌱 I’m currently deepening my knowledge of Javascript and React
 - 📫 How to reach me : marie.buerki@gmail.com
 
 - 🖥️ My portfolio : https://marie-bu.github.io/marie-bu/
